@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboard</title>
+    <!-- detta är endast för att påbörja lite styling, ändrar till riktiga variablerna sen -->
+     <link rel="stylesheet" href="../css/test-css-leaderboard.css">
 </head>
 
 <body>
     <main class="leaderboard">
         <section class="section leaderboard-content">
-            <header>
+            <header class="leaderboard-header">
                 <p class="pill">Topplista</p>
                 <h1>Senaste omgångarna</h1>
-                <p>Bäst hittills: Maja, 10 av 10</p>
+                <p>Bäst hittills: Maja, 9 av 10</p>
             </header>
 
             <ol class="leaderboard-list">
@@ -27,7 +29,7 @@
                             - din omgång
                         </p>
                     </div>
-                    <div class="leaderboard-track-bar" aria-hidden="true">
+                    <div class="leaderboard-track-bar is-current" aria-hidden="true">
                         <span class="is-filled"></span>
                         <span class="is-filled"></span>
                         <span class="is-filled"></span>
@@ -37,12 +39,12 @@
                         <span class="is-filled"></span>
                         <span class="is-filled"></span>
                         <span class="is-filled"></span>
-                        <span class="is-filled"></span>
+                        <span></span>
                     </div>
-                    <p class="leaderboard-score">10<span>/10</span></p>
+                    <p class="leaderboard-score">9 <span>/10</span></p>
                 </li>
 
-                <li class="leaderboard-row is-current">
+                <li class="leaderboard-row">
                     <div class="leaderboard-name">
                         <p>Alexander</p>
 
@@ -63,10 +65,10 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <p class="leaderboard-score">6<span>/10</span></p>
+                    <p class="leaderboard-score">6 <span>/10</span></p>
                 </li>
 
-                <li class="leaderboard-row is-current">
+                <li class="leaderboard-row">
                     <div class="leaderboard-name">
                         <p>Saga</p>
 
@@ -87,10 +89,10 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <p class="leaderboard-score">5<span>/10</span></p>
+                    <p class="leaderboard-score">5 <span>/10</span></p>
                 </li>
 
-                <li class="leaderboard-row is-current">
+                <li class="leaderboard-row">
                     <div class="leaderboard-name">
                         <p>Frida</p>
 
@@ -111,10 +113,10 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <p class="leaderboard-score">4<span>/10</span></p>
+                    <p class="leaderboard-score">4 <span>/10</span></p>
                 </li>
 
-                <li class="leaderboard-row is-current">
+                <li class="leaderboard-row">
                     <div class="leaderboard-name">
                         <p>Niklas</p>
 
@@ -135,25 +137,28 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <p class="leaderboard-score">2<span>/10</span></p>
+                    <p class="leaderboard-score">2 <span> /10</span></p>
                 </li>
             </ol>
 
             <div class="leaderboard-actions">
-                <button class="button">Spela igen</button>
-                <button class="button">Byt namn</button>
+                <button class="button leaderboard-button">Spela igen
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+                </button>
+                <button class="button secondary leaderboard-button">Byt namn</button>
             </div>
         </section>
 
+        <img src="../assets/img/score-jar.png" alt="">
         <!-- Ska användas i js för att skapa elementen utan att behöva göra allt för hand i js -->
         <template id="leaderboard-row-template">
             <li class="leaderboard-row is-current">
                 <div class="leaderboard-name">
-                    <p>Niklas</p>
+                    <p></p>
 
                     <p class="leaderboard-meta">
                         <!-- i javascript sätts de riktiga tiderna -->
-                        <time datetime="2026-10-10">10 oktober</time>
+                        <time datetime="2026-10-10"></time>
                     </p>
                 </div>
                 <div class="leaderboard-track-bar" aria-hidden="true">
@@ -168,7 +173,7 @@
                     <span></span>
                     <span></span>
                 </div>
-                <p class="leaderboard-score">2<span>/10</span></p>
+                <p class="leaderboard-score"> <span></span></p>
             </li>
             </ol>
 
@@ -176,6 +181,7 @@
                 <button class="button">Spela igen</button>
                 <button class="button">Byt namn</button>
             </div>
+            
         </template>
     </main>
 </body>
