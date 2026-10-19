@@ -1,0 +1,268 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+
+:root {
+  /* =========================================
+     COLORS
+     Central color palette for the Brainclimb
+     interface. Reuse these variables instead
+     of writing hex codes throughout the CSS.
+     ========================================= */
+
+  /* Main brand color.
+     Used for primary buttons, headings, the logo
+     and other important interface elements. */
+  --color-primary: #17213C;
+
+  /* Secondary brand color.
+     Used for secondary elements and subtle
+     visual accents that complement the primary color. */
+  --color-secondary: #435F60;
+
+  /* Main accent color.
+     Used to highlight important details, categories,
+     selected text and interactive elements. */
+  --color-accent: #F15C4F;
+
+  /* Warm accent color.
+     Used for additional decorative details and
+     secondary highlights in the interface. */
+  --color-accent-warm: #B96B48;
+
+  /* Alternative coral accent.
+     Used for specific states or details where
+     a slightly different coral shade is needed. */
+  --color-accent-coral-dark: #EE5549;
+
+
+  /* =========================================
+     BACKGROUND COLORS
+     Used for page backgrounds and larger
+     colored areas in the interface.
+     ========================================= */
+
+  /* Main page background.
+     Creates the warm, soft background used
+     throughout the Brainclimb interface. */
+  --color-background: #F4F1E9;
+
+  /* Light background.
+     Used for areas that need a clean, bright
+     background, such as cards and input fields. */
+  --color-background-light: #FFFFFF;
+
+  /* Mint background.
+     Used for larger mint-colored areas,
+     illustrations and selected interface sections. */
+  --color-background-mint: #CFE9E2;
+
+  /* Pale yellow background.
+     Used for occasional highlights, informational
+     sections or decorative elements. */
+  --color-background-yellow: #F8EDBD;
+
+
+  /* =========================================
+     SURFACE COLORS
+     Used for component backgrounds, borders
+     and other elements placed on the page.
+     ========================================= */
+
+  /* Muted surface color.
+     Used for subtle borders, dividers and
+     neutral details that should not dominate. */
+  --color-surface-muted: #D8D1C2;
+
+  /* Mint surface color.
+     Used for mint-colored component backgrounds,
+     such as selected answers or highlighted cards. */
+  --color-surface-mint: #B9D9D1;
+
+
+  /* =========================================
+     TEXT COLORS
+     Used to create a clear visual hierarchy
+     between different types of text.
+     ========================================= */
+
+  /* Primary text color.
+     Used for headings, questions, answer text
+     and other important content. */
+  --color-text-primary: #17213C;
+
+  /* Secondary text color.
+     Used for supporting information, descriptions
+     and text that is less prominent than headings. */
+  --color-text-secondary: #565B68;
+
+  /* Muted text color.
+     Used for less prominent information, such as
+     helper text, metadata and secondary labels.
+     Check contrast before using it for small text. */
+  --color-text-muted: #686B68;
+
+  /* Neutral color.
+     Used for neutral interface details and
+     decorative elements that need a subdued tone. */
+  --color-neutral: #898A84;
+
+
+  /* =========================================
+     TYPOGRAPHY: FONT FAMILIES
+     Defines which font to use for headings
+     and general interface text.
+     ========================================= */
+
+  /* Heading font.
+     Manrope is used for larger headings and
+     prominent text to match the Figma design. */
+  --font-family-heading: "Manrope", sans-serif;
+
+  /* Body font.
+     DM Sans is used for paragraphs, questions,
+     answer options, labels and general UI text. */
+  --font-family-body: "DM Sans", sans-serif;
+
+
+  /* =========================================
+     TYPOGRAPHY: FONT SIZES
+     A shared scale that keeps text sizes
+     consistent throughout the application.
+     ========================================= */
+
+  /* Small text: 14px at the default root size.
+     Used for helper text, small descriptions
+     and supporting information. */
+  --font-size-sm: 0.875rem;
+
+  /* Base text: 16px at the default root size.
+     Used for body text, answer options and
+     the standard size for interface text. */
+  --font-size-base: 1rem;
+
+  /* Large text: 18px at the default root size.
+     Used for emphasized body text or
+     interface text that needs more prominence. */
+  --font-size-lg: 1.125rem;
+
+  /* Extra-large text: 24px at the default root size.
+     Used for question headings and smaller
+     section headings. */
+  --font-size-xl: 1.5rem;
+
+  /* Large heading: 32px at the default root size.
+     Used for prominent headings and result scores. */
+  --font-size-2xl: 2rem;
+
+  /* Largest predefined size: 40px at the default
+     root size.
+     Used for the main heading on the start page
+     and other highly prominent text. */
+  --font-size-3xl: 2.5rem;
+
+
+  /* =========================================
+     TYPOGRAPHY: FONT WEIGHTS
+     Defines the standard text thicknesses
+     used throughout the interface.
+     ========================================= */
+
+  /* Regular weight: 400.
+     Used for normal body text and descriptions. */
+  --font-weight-regular: 400;
+
+  /* Medium weight: 500.
+     Used for questions, labels and text that
+     needs slightly more emphasis than regular. */
+  --font-weight-medium: 500;
+
+  /* Bold weight: 700.
+     Used for prominent headings, buttons and
+     important information.
+     Make sure this font weight is loaded. */
+  --font-weight-bold: 700;
+
+
+  /* =========================================
+     TYPOGRAPHY: LINE HEIGHTS
+     Controls the vertical space between lines
+     of text.
+     ========================================= */
+
+  /* Tight line height: 1.2.
+     Used for headings, especially large headings
+     that span multiple lines. */
+  --line-height-heading: 1.2;
+
+  /* Normal line height: 1.5.
+     Used for paragraphs, descriptions and
+     most general interface text. */
+  --line-height-body: 1.5;
+
+
+  /* =========================================
+     SPACING
+     Shared spacing scale based on increments
+     of 4px at the default root font size.
+     Use these values for padding, margins and gaps.
+     ========================================= */
+
+  /* Extra-small spacing: 4px.
+     Used for very small gaps, such as between
+     closely related visual elements. */
+  --spacing-xs: 0.25rem;
+
+  /* Small spacing: 8px.
+     Used for compact gaps, such as between
+     an icon and its label. */
+  --spacing-sm: 0.5rem;
+
+  /* Medium spacing: 12px.
+     Used for small gaps between related elements,
+     such as within compact components. */
+  --spacing-md: 0.75rem;
+
+  /* Base spacing: 16px.
+     The standard spacing value for the interface.
+     Used for common padding and element gaps. */
+  --spacing-base: 1rem;
+
+  /* Large spacing: 24px.
+     Used to separate related groups of content
+     and to add more room inside components. */
+  --spacing-lg: 1.5rem;
+
+  /* Extra-large spacing: 32px.
+     Used between larger content groups
+     and major interface sections. */
+  --spacing-xl: 2rem;
+
+  /* Largest spacing: 48px.
+     Used for generous separation between
+     major sections of the page. */
+  --spacing-2xl: 3rem;
+
+
+  /* =========================================
+     BORDER RADIUS
+     Defines the standard corner rounding
+     for buttons, cards and other components.
+     ========================================= */
+
+  /* Small radius: 6px.
+     Used for small elements that need
+     slightly rounded corners. */
+  --border-radius-sm: 0.375rem;
+
+  /* Medium radius: 12px.
+     Used for standard buttons, inputs
+     and smaller cards. */
+  --border-radius-md: 0.75rem;
+
+  /* Large radius: 16px.
+     Used for larger cards and components
+     where a softer, more rounded appearance
+     matches the Brainclimb design. */
+  --border-radius-lg: 1rem;
+}
