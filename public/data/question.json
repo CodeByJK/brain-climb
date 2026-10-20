@@ -1,1 +1,112 @@
- 
+[
+  {
+    "id": 1,
+    "question": "Which of these animals has three hearts?",
+    "answers": [
+      "Shark",
+      "Octopus",
+      "Crocodile",
+      "Penguin"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 2,
+    "question": "Which country has more pyramids than Egypt?",
+    "answers": [
+      "Mexico",
+      "Sudan",
+      "Peru",
+      "Jordan"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 3,
+    "question": "What is the only mammal capable of true flight?",
+    "answers": [
+      "Flying squirrel",
+      "Sugar glider",
+      "Bat",
+      "Colugo"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 4,
+    "question": "Which of these is botanically classified as a berry?",
+    "answers": [
+      "Strawberry",
+      "Raspberry",
+      "Blackberry",
+      "Banana"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 5,
+    "question": "What happens to the Eiffel Tower during hot summer weather?",
+    "answers": [
+      "It becomes slightly taller",
+      "It changes color",
+      "It leans toward the sea",
+      "It becomes lighter"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 6,
+    "question": "Which planet has a day that is longer than its year?",
+    "answers": [
+      "Mars",
+      "Venus",
+      "Jupiter",
+      "Neptune"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 7,
+    "question": "Which of these famous historical figures was born first?",
+    "answers": [
+      "Cleopatra",
+      "Julius Caesar",
+      "Alexander the Great",
+      "Augustus"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 8,
+    "question": "What is the fear of long words humorously called?",
+    "answers": [
+      "Hippopotomonstrosesquipedaliophobia",
+      "Chronophobia",
+      "Logophobia",
+      "Sesquipedalophobia"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 9,
+    "question": "Which of these foods can last for thousands of years without spoiling when properly stored?",
+    "answers": [
+      "Cooked rice",
+      "Fresh cheese",
+      "Honey",
+      "Peanut butter"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 10,
+    "question": "If you shuffle a standard deck of 52 playing cards thoroughly, what is remarkable about the resulting order?",
+    "answers": [
+      "It will probably match an order used before",
+      "It is likely a sequence that has never existed before",
+      "It will always contain four cards of the same suit together",
+      "It will have the same number of red and black cards in every half"
+    ],
+    "correctAnswer": 1
+  }
+]
