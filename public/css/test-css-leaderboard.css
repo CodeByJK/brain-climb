@@ -1,12 +1,5 @@
 :root {
-    --color-bg: #F4F1E9;
-    --color-text: #17213C;
-    --color-text-muted: #747773;
-    --color-surface-strong: #E2F2E8;
-    --color-text-on-surface-strong: #195B4A;
-    --color-button-bg: #213058;
-    --color-button-text: #fff;
-    --color-button-shadow: #17213C;
+    --color-button-shadow: #070b14;
 
     /* Skugga för knapp */
     --shadow-hard: 0 7px 0 0 var(--color-button-shadow);
@@ -17,33 +10,52 @@
     padding: 0;
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-family-heading);
+    color: var(--color-primary);
+}
+
 body {
-    background-color: var(--color-bg);
+    font-family: var(--font-family-body);
+    background-color: var(--color-background);
     color: var(--color-text);
 }
 
 .section {
-    max-width: 1300px;
+    max-width: 1200px;
     width: 100%;
+    margin: 0 auto;
     padding: 32px 24px;
 }
 
 .leaderboard-header{
     h1 {
-        margin-block: 12px;
+        color: var(--color-primary);
+        font-size: var(--font-size-2xl);
+        font-weight: var(--font-weight-bold);
+        margin-block: var(--spacing-md);
     }
-    margin-bottom: 24px;
+    color: var(--color-text-muted);
+    margin-bottom: var( --spacing-xl);
+}
+
+.leaderboard-list-container {
+    background-color: var(--color-background-light);
+    border: 1px solid var( --color-surface-muted);
+    padding: 24px;
+    border-radius: var(--border-radius-lg);
 }
 
 .pill {
-    background-color: var(--color-text);
-    color: var(--color-button-text);
+    background-color: var(--color-accent);
+    color: var(--color-background-light);
     padding: 8px 10px;
     border-radius: 6px 3px 6px 3px;
     transform: rotate(-1.5deg);
 
     width: fit-content;
     line-height: 0.5;
+    font-weight: var(--font-weight-bold);
 }
 
 /* Leaderboard listan */
@@ -53,15 +65,15 @@ body {
     list-style: none;
     padding: 0;
     counter-reset: rank;
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing-lg);
 
     .leaderboard-row{
         counter-increment: rank;
         padding: 4px 8px;
-        border-radius: 12px;
-        background-color: var(--color-surface-strong);
-        color: var(--color-text-on-surface-strong);
-        margin-block: 12px;
+        border-radius: var(--border-radius-md);
+        background-color: var(--color-surface-mint);
+        color: var(--color-secondary);
+        margin-block: var(--spacing-md);
         display: flex;
         align-items: center;
     }
@@ -74,14 +86,14 @@ body {
         aspect-ratio: 1;
         border-radius: 50%;
         background-color: #fff;
-        font-weight: 700;
-        margin-right: 12px;
-        color: var(--color-text-on-surface-strong);
+        font-weight: var(--font-weight-bold);
+        margin-right: var(--spacing-md);
+        color: var(--color-secondary);
     }
 
     .leaderboard-row.is-current {
-        background-color: var(--color-text-on-surface-strong);
-        color: var(--color-surface-strong);
+        background-color: var(--color-secondary);
+        color: #fff;
     }
 }
 
@@ -116,7 +128,7 @@ body {
         height: 16px;
         border-radius: 2px;
         opacity: 0.25;
-        background-color: var(--color-text-on-surface-strong);
+        background-color: var(--color-secondary);
     }
 
     span.is-filled{
@@ -147,29 +159,25 @@ body {
 }
 
 .button {
-    background-color: var(--color-button-bg);
-    color: var(--color-button-text);
+    background-color: var(--color-primary);
+    color: var(--color-background-light);
     border: none;
     padding: 20px 12px;
-    border-radius: 12px;
+    border-radius: var(--border-radius-md);
     box-shadow: var(--shadow-hard);
     cursor: pointer;
+    font-size: 18px;
+    font-weight: var(--font-weight-bold);
+
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 18px;
-    font-weight: 600;
-
+    
     svg {
         width: 28px;
     }
 }
 
-.button.secondary {
-    background-color: var(--color-bg);
-    border: 2px solid var(--color-button-bg);
-    color: var(--color-text);
-}
 
 .button:active {
     translate: 0 4px;
@@ -185,4 +193,10 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+@media (width > 46rem) {
+    .button {
+        max-width: 250px;
+    }
 }
