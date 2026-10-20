@@ -1,6 +1,5 @@
 :root {
     --color-button-shadow: #070b14;
-
     /* Skugga för knapp */
     --shadow-hard: 0 7px 0 0 var(--color-button-shadow);
 }
@@ -28,7 +27,28 @@ body {
     padding: 32px 24px;
 }
 
+.section.leaderboard-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: 
+    "header scorejar"
+    "list list";
+    column-gap: var(--spacing-md);
+    row-gap: var(--spacing-xl);
+}
+
+.img-wrapper {
+    grid-area: scorejar;
+    width: 64px;
+    align-self: self-start;
+}
+
+.img-wrapper img {
+    width: 100%;
+}
+
 .leaderboard-header{
+    grid-area: header;
     h1 {
         color: var(--color-primary);
         font-size: var(--font-size-2xl);
@@ -40,6 +60,7 @@ body {
 }
 
 .leaderboard-list-container {
+    grid-area: list;
     background-color: var(--color-background-light);
     border: 1px solid var( --color-surface-muted);
     padding: 24px;
@@ -52,6 +73,7 @@ body {
     padding: 8px 10px;
     border-radius: 6px 3px 6px 3px;
     transform: rotate(-1.5deg);
+    font-size: var(--font-size-sm);
 
     width: fit-content;
     line-height: 0.5;
@@ -69,7 +91,7 @@ body {
 
     .leaderboard-row{
         counter-increment: rank;
-        padding: 4px 8px;
+        padding: 8px 12px;
         border-radius: var(--border-radius-md);
         background-color: var(--color-surface-mint);
         color: var(--color-secondary);
@@ -99,20 +121,20 @@ body {
 
 .leaderboard-name {
     p {
-        font-weight: 600;
-        margin-bottom: 4px;
+        font-weight: var(--font-weight-bold);
     }
     .leaderboard-meta {
-        font-weight: 400;
+        font-weight: var(--font-weight-regular);
+        font-size: var(--font-size-sm);
     }
 }
 
 .leaderboard-score {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
     span {
-        font-size: 16px;
-        font-weight: 400;
+        font-size: var(--font-size-base);
+        font-weight: var(--font-weight-regular);
     }
 }
 
@@ -121,7 +143,7 @@ body {
     align-items: flex-start;
     gap: 2px;
     margin-left: auto;
-    margin-right: 16px;
+    margin-right: var(--spacing-md);
 
     span {
         width: 5px;
@@ -155,33 +177,6 @@ body {
 
 .leaderboard-actions {
     display: flex;
-    gap: 32px;
-}
-
-.button {
-    background-color: var(--color-primary);
-    color: var(--color-background-light);
-    border: none;
-    padding: 20px 12px;
-    border-radius: var(--border-radius-md);
-    box-shadow: var(--shadow-hard);
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: var(--font-weight-bold);
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    
-    svg {
-        width: 28px;
-    }
-}
-
-
-.button:active {
-    translate: 0 4px;
-    box-shadow: 0 3px 0 0 var(--color-shadow);
 }
 
 .leaderboard-button {
@@ -198,5 +193,21 @@ img {
 @media (width > 46rem) {
     .button {
         max-width: 250px;
+    }
+}
+
+@media (width > 64rem) {
+    .section.leaderboard-content {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.7fr);
+        grid-template-areas: 
+        "header scorejar"
+        "list scorejar";
+        column-gap: var(--spacing-2xl);
+    }
+
+    .img-wrapper {
+        width: min(320px, 100%);
+        justify-self: center;
+        align-self: center;
     }
 }

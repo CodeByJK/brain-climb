@@ -7,17 +7,23 @@
     <title>Leaderboard</title>
     <!-- detta är endast för att påbörja lite styling, ändrar till riktiga variablerna sen -->
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/test-css-leaderboard.css">
 </head>
 
 <body>
     <main class="leaderboard">
         <section class="section leaderboard-content">
+            
             <header class="leaderboard-header">
                 <p class="pill">Topplista</p>
                 <h1>Senaste omgångarna</h1>
                 <p>Bäst hittills: Maja, 9 av 10</p>
             </header>
+
+            <div class="img-wrapper">
+                <img src="../assets/img/score-jar-2.png" alt="">
+            </div>
 
             <div class="leaderboard-list-container">
                 <ol class="leaderboard-list">
@@ -149,13 +155,14 @@
                             <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
                         </svg>
                     </button>
+                    </div>
                 </div>
         </section>
 
-        <img src="../assets/img/score-jar.png" alt="">
+        
         <!-- Ska användas i js för att skapa elementen utan att behöva göra allt för hand i js -->
         <template id="leaderboard-row-template">
-            <li class="leaderboard-row is-current">
+            <li class="leaderboard-row">
                 <div class="leaderboard-name">
                     <p></p>
 
@@ -178,13 +185,6 @@
                 </div>
                 <p class="leaderboard-score"> <span></span></p>
             </li>
-            </ol>
-            </div>
-
-            <div class="leaderboard-actions">
-                <button class="button">Spela igen</button>
-            </div>
-
         </template>
     </main>
 </body>
