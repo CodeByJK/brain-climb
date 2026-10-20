@@ -1,0 +1,47 @@
+/* =========================================
+layout.css
+Sidans struktur, behållare, placering och responsiva layouter
+========================================= */
+
+
+/* Gemensam behållare för sidinnehåll */ 
+.container { /*klassnamn att uppdatera! */
+width: 100%;
+max-width: 1200px;
+margin-inline: auto;
+padding-inline: var(--spacing-base);
+}
+
+
+
+
+
+
+
+
+/* =========================================
+RESPONSIVE LAYOUT
+Mobile first
+========================================= */
+
+/* Surfplatta – från 600 px */
+@media (min-width: 600px) {
+.container {
+padding-inline: var(--spacing-lg);
+}
+}
+
+/* Laptop – från 900 px */
+@media (min-width: 900px) {
+.container {
+padding-inline: var(--spacing-xl);
+}
+}
+
+/* Stor skärm – från 1200 px */
+@media (min-width: 1200px) {
+.container {
+padding-inline: var(--spacing-2xl);
+}
+}
+
