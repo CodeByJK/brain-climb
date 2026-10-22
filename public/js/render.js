@@ -61,7 +61,7 @@ export function renderTime(seconds) {
   const timerElement = getElement(selectors.timer);
   if (!timerElement) return;
 
-  timerElement.textContent = formatTime(seconds);
+  timerElement.textContent = seconds;
 }
 
 export function renderError(message) {
