@@ -1,253 +1,267 @@
+
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background-color: var(--color-background);
-  color: var(--color-text-primary);
-  font-family: var(--font-family-body);
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-family-body);
 }
 
 .quiz-page {
-  width: 80%;
-  min-height: auto;
-  margin: 0 auto;
-  background-color: var(--color-background);
+    width: 80%;
+    min-height: auto;
+    margin: 0 auto;
+    background-color: var(--color-background);
 }
 
 .quiz-question {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .quiz-header {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 200px;
-  padding: 10px 12px 48px;
-  background-color: var(--color-background-mint);
-  border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
-
-  .header-corner {
-    color: var(--color-text-secondary);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-bold);
-  }
-
-  .numbers {
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
+    flex-direction: column;
+    width: 100%;
+    min-height: 200px;
+    padding: 10px 12px 48px;
+    background-color: var(--color-background-mint);
+    border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
 
-  .question-number {
-    color: var(--color-text-primary);
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-medium);
-
-    p {
-      font-size: var(--font-size-base);
+    .header-corner {
+        color: var(--color-text-secondary);
+        font-size: var(--font-size-sm);
+        font-weight: var(--font-weight-bold);
     }
 
-    span {
-      color: var(--color-accent);
-      font-size: var(--font-size-2xl);
-      font-weight: var(--font-weight-bold);
-    }
-  }
-
-  .timer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    margin-top: -8px;
-    border: 2px solid var(--color-accent);
-    border-radius: 50%;
-    color: var(--color-accent-coral-dark);
-    font-size: var(--font-size-sm);
-  }
-
-  .category {
-    align-self: flex-start;
-    margin-top: 15px;
-    padding: 3px 6px;
-    border-radius: var(--border-radius-sm);
-    background-color: var(--color-text-primary);
-    color: var(--color-background);
-    font-size: var(--font-size-sm);
-  }
-
-  .question {
-    max-width: 180px;
-    margin-top: 16px;
-    color: var(--color-text-primary);
-    font-size: var(--font-size-lg);
-    line-height: var(--line-height-heading);
-  }
-
-  .question-bar {
-    position: absolute;
-    right: 12px;
-    top: 70px;
-    left: 12px;
-    display: flex;
-    gap: var(--spacing-xs);
-    height: 3px;
-
-    span {
-      width: 100%;
-      border-radius: var(--border-radius-sm);
-      background-color: var(--color-background-light);
+    .numbers {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 
-    span.question-number {
-      background-color: var(--color-text-primary);
+    .question-number {
+        color: var(--color-text-primary);
+        font-size: var(--font-size-base);
+        font-weight: var(--font-weight-medium);
+
+        p {
+            font-size: var(--font-size-base);
+        }
+
+        span {
+            color: var(--color-accent);
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-bold);
+        }
     }
-  }
 
-  .score-jar {
-    position: absolute;
-    bottom: 25%;
-    right: 12px;
-
-    img {
-      display: block;
-      width: 33px;
-      height: 80px;
-      object-fit: contain;
+    .timer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin-top: -8px;
+        border: 2px solid var(--color-accent);
+        border-radius: 50%;
+        color: var(--color-accent-coral-dark);
+        font-size: var(--font-size-sm);
     }
-  }
 
-  .score {
-    position: absolute;
-    right: 12px;
-    bottom: 12px;
-    color: var(--color-text-secondary);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-bold);
-  }
+    .category {
+        align-self: flex-start;
+        margin-top: 15px;
+        padding: 3px 6px;
+        border-radius: var(--border-radius-sm);
+        background-color: var(--color-text-primary);
+        color: var(--color-background);
+        font-size: var(--font-size-sm);
+    }
+
+    .question {
+        max-width: 180px;
+        margin-top: 16px;
+        color: var(--color-text-primary);
+        font-size: var(--font-size-lg);
+        line-height: var(--line-height-heading);
+    }
+
+    .question-bar {
+        position: absolute;
+        right: 12px;
+        top: 70px ; 
+        left: 12px;
+        display: flex;
+        gap: var(--spacing-xs);
+        height: 3px;
+
+        span {
+            width: 100%;
+            border-radius: var(--border-radius-sm);
+            background-color: var(--color-background-light)
+            ;
+        }
+
+        span.question-number {
+            background-color: var(--color-text-primary);
+        }
+    }
+
+    .score-jar {
+        position: absolute;
+        bottom: 25%;
+        right: 12px;
+
+        img {
+            display: block;
+            width: 33px;
+            height: 80px;
+            object-fit: contain;
+        }
+    }
+
+    .score {
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+        color: var(--color-text-secondary);
+        font-size: var(--font-size-sm);
+        font-weight: var(--font-weight-bold);
+    }
 }
 
 .quiz-content {
-  display: flex;
-  flex-direction: column;
-  padding: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
 }
 
 .answers {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .answer {
-  width: 100%;
-  min-height: 35px;
-  padding: 8px;
-  border: 1px var(--color-surface-muted);
-  border-radius: var(--border-radius-sm);
-  background-color: var(--color-background-light);
-  color: var(--color-text-primary);
-  font-family: inherit;
-  font-size: var(--font-size-sm);
-  text-align: left;
-  cursor: pointer;
+    width: 100%;
+    min-height: 35px;
+    padding: 8px;
+    border: 1px  var(--color-surface-muted);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--color-background-light);
+    color: var(--color-text-primary);
+    font-family: inherit;
+    font-size: var(--font-size-sm);
+    text-align: left;
+    cursor: pointer;
 }
 
 .answer:hover {
-  background-color: var(--color-surface-mint);
+    background-color: var(--color-surface-mint);
 }
 
 .answer:focus-visible,
 .next-question:focus-visible {
-  outline: 3px solid var(--color-accent);
-  outline-offset: 3px;
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
 }
 
 .instructions {
-  margin-top: 18px;
-  margin-bottom: 10px;
-  color: var(--color-text-muted);
-  font-size: var(--font-size-sm);
-  text-align: center;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    text-align: center;
 }
 
 .next-question {
-  width: 100%;
-  height: 35px;
-  padding: 9px;
-  border: none;
-  border-radius: var(--border-radius-lg);
-  background-color: var(--color-background-mint);
-  color: var(--color-text-muted);
-  font-family: inherit;
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  cursor: pointer;
+    width: 100%;
+    height: 35px;
+    padding: 9px;
+    border: none;
+    border-radius: var(--border-radius-lg);
+    background-color: var(--color-background-mint);
+    color: var(--color-text-muted);
+    font-family: inherit;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
 }
 .correct-answer,
 .incorrect-answer {
-  display: block;
-  margin: 0 12px 10px;
-  overflow: hidden;
-  border: 1px solid var(--color-surface-muted);
-  border-radius: var(--border-radius-md);
-  background-color: var(--color-background-light);
-  font-size: var(--font-size-sm);
+    display: block;
+    margin: 0 12px 10px;
+    overflow: hidden;
+    border: 1px  solid var(--color-surface-muted);
+    border-radius: var(--border-radius-md);
+    background-color: var(--color-background-light);
+    font-size: var(--font-size-sm);
 }
 
 .correct-header,
 .incorrect-header {
-  padding: 8px;
+    padding: 8px;
 }
 
 .correct-header {
-  background-color: #e0f7e5;
-  color: #053e1d;
+    background-color: #E0F7E5;
+    color: #053E1D;
 }
 
 .incorrect-header {
-  background-color: #ffeae7;
-  color: #481210;
+    background-color: #FFEAE7;
+    color: #481210;
 }
 
 .correct-header h3,
 .incorrect-header h3 {
-  font-size: var(--font-size-base);
+    font-size: var(--font-size-base);
 }
 
 .correct-header p,
 .incorrect-header p {
-  margin-top: 2px;
-  font-size: var(--font-size-base);
+    margin-top: 2px;
+    font-size: var(--font-size-base);
 }
 
 .correct-answer > span,
 .incorrect-answer > span {
-  display: inline-block;
-  margin: 8px 9px 3px;
-  padding: 2px 5px;
-  border-radius: var(--border-radius-sm);
-  background-color: var(--color-text-primary);
-  color: var(--color-background-light);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+    display: inline-block;
+    margin: 8px 9px 3px;
+    padding: 2px 5px;
+    border-radius: var(--border-radius-sm);
+    background-color: var(--color-text-primary);
+    color: var(--color-background-light);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
 }
 
 .correct-answer > p,
 .incorrect-answer > p {
-  padding: 0 9px 10px;
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-body);
+    padding: 0 9px 10px;
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-body);
 }
-
 /* hidden ska alltid dölja, även om elementet har en egen display */
 [hidden] {
   display: none !important;
+}
+
+.answer.is-correct {
+  background-color: var(--color-surface-mint);
+  border: 2px solid var(--color-secondary);
+}
+
+.answer.is-wrong {
+  border: 2px solid var(--color-accent);
+}
+
+.answer:disabled {
+  cursor: default;
 }
