@@ -1,3 +1,7 @@
+/* =========================================
+base.css
+Färger, typsnitt, variabler och grundläggande standarder
+========================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
 
@@ -265,4 +269,11 @@
      where a softer, more rounded appearance
      matches the Brainclimb design. */
   --border-radius-lg: 1rem;
+}
+
+/* Reset: grundinställningar för alla element */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
