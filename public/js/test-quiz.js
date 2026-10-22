@@ -67,6 +67,34 @@ function getResult(){
     }
 }
 
+// TODO
+function nextQuestion(){
+    // Står vi redan på sista frågan? Då finns ingen nästa.
+    if (state.currentQuestionIndex >= state.questions.length - 1) return false;
+
+
+    // Annars: gå ett steg framåt
+    state.currentQuestionIndex++;
+    return true;
+
+}
+
+// TODO
+function isFinished(){
+    // Returnerar true/false beroende på om svar arrayens längd är samma som frågorna: samma -> spelet slut
+    return state.questions.length === state.userAnswers.length;
+}
+
+// TODO
+function getState(){
+
+}
+
+// TODO 
+function restoreQuiz(){
+    
+}
+
 getCurrentQuestion();
 answerQuestion(1);
 answerQuestion(1);
