@@ -29,3 +29,18 @@ Knappar, kort, formulär och andra återanvändbara komponenter
     translate: 0 4px;
     box-shadow: 0 3px 0 0 var(--color-shadow);
 }
+
+
+/* Pills */
+.pill {
+    background-color: var(--color-accent);
+    color: var(--color-background-light);
+    padding: 8px 10px;
+    border-radius: 6px 3px 6px 3px;
+    transform: rotate(-1.5deg);
+    font-size: var(--font-size-sm);
+
+    width: fit-content;
+    line-height: 0.5;
+    font-weight: var(--font-weight-bold);
+}
