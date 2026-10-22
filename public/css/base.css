@@ -3,8 +3,7 @@ base.css
 Färger, typsnitt, variabler och grundläggande standarder
 ========================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap");
 
 :root {
   /* =========================================
@@ -17,28 +16,27 @@ Färger, typsnitt, variabler och grundläggande standarder
   /* Main brand color.
      Used for primary buttons, headings, the logo
      and other important interface elements. */
-  --color-primary: #17213C;
+  --color-primary: #17213c;
 
   /* Secondary brand color.
      Used for secondary elements and subtle
      visual accents that complement the primary color. */
-  --color-secondary: #435F60;
+  --color-secondary: #435f60;
 
   /* Main accent color.
      Used to highlight important details, categories,
      selected text and interactive elements. */
-  --color-accent: #F15C4F;
+  --color-accent: #f15c4f;
 
   /* Warm accent color.
      Used for additional decorative details and
      secondary highlights in the interface. */
-  --color-accent-warm: #B96B48;
+  --color-accent-warm: #b96b48;
 
   /* Alternative coral accent.
      Used for specific states or details where
      a slightly different coral shade is needed. */
-  --color-accent-coral-dark: #EE5549;
-
+  --color-accent-coral-dark: #ee5549;
 
   /* =========================================
      BACKGROUND COLORS
@@ -49,23 +47,22 @@ Färger, typsnitt, variabler och grundläggande standarder
   /* Main page background.
      Creates the warm, soft background used
      throughout the Brainclimb interface. */
-  --color-background: #F4F1E9;
+  --color-background: #f4f1e9;
 
   /* Light background.
      Used for areas that need a clean, bright
      background, such as cards and input fields. */
-  --color-background-light: #FFFFFF;
+  --color-background-light: #ffffff;
 
   /* Mint background.
      Used for larger mint-colored areas,
      illustrations and selected interface sections. */
-  --color-background-mint: #CFE9E2;
+  --color-background-mint: #cfe9e2;
 
   /* Pale yellow background.
      Used for occasional highlights, informational
      sections or decorative elements. */
-  --color-background-yellow: #F8EDBD;
-
+  --color-background-yellow: #f8edbd;
 
   /* =========================================
      SURFACE COLORS
@@ -76,13 +73,12 @@ Färger, typsnitt, variabler och grundläggande standarder
   /* Muted surface color.
      Used for subtle borders, dividers and
      neutral details that should not dominate. */
-  --color-surface-muted: #D8D1C2;
+  --color-surface-muted: #d8d1c2;
 
   /* Mint surface color.
      Used for mint-colored component backgrounds,
      such as selected answers or highlighted cards. */
-  --color-surface-mint: #B9D9D1;
-
+  --color-surface-mint: #b9d9d1;
 
   /* =========================================
      TEXT COLORS
@@ -93,24 +89,36 @@ Färger, typsnitt, variabler och grundläggande standarder
   /* Primary text color.
      Used for headings, questions, answer text
      and other important content. */
-  --color-text-primary: #17213C;
+  --color-text-primary: #17213c;
 
   /* Secondary text color.
      Used for supporting information, descriptions
      and text that is less prominent than headings. */
-  --color-text-secondary: #565B68;
+  --color-text-secondary: #565b68;
 
   /* Muted text color.
      Used for less prominent information, such as
      helper text, metadata and secondary labels.
      Check contrast before using it for small text. */
-  --color-text-muted: #686B68;
+  --color-text-muted: #686b68;
 
   /* Neutral color.
      Used for neutral interface details and
      decorative elements that need a subdued tone. */
-  --color-neutral: #898A84;
+  --color-neutral: #898a84;
 
+   /* =========================================
+     ANSWER FEEDBACK COLORS
+     Colors for correct and incorrect answers.
+     ========================================= */
+
+  /* Correct answer */
+  --color-correct-background: #E0F7E5;
+  --color-correct-text: #053E1D;
+
+  /* Incorrect answer */
+  --color-incorrect-background: #FFEAE7;
+  --color-incorrect-text: #481210;
 
   /* =========================================
      TYPOGRAPHY: FONT FAMILIES
@@ -127,7 +135,6 @@ Färger, typsnitt, variabler och grundläggande standarder
      DM Sans is used for paragraphs, questions,
      answer options, labels and general UI text. */
   --font-family-body: "DM Sans", sans-serif;
-
 
   /* =========================================
      TYPOGRAPHY: FONT SIZES
@@ -165,7 +172,6 @@ Färger, typsnitt, variabler och grundläggande standarder
      and other highly prominent text. */
   --font-size-3xl: 2.5rem;
 
-
   /* =========================================
      TYPOGRAPHY: FONT WEIGHTS
      Defines the standard text thicknesses
@@ -187,7 +193,6 @@ Färger, typsnitt, variabler och grundläggande standarder
      Make sure this font weight is loaded. */
   --font-weight-bold: 700;
 
-
   /* =========================================
      TYPOGRAPHY: LINE HEIGHTS
      Controls the vertical space between lines
@@ -203,7 +208,6 @@ Färger, typsnitt, variabler och grundläggande standarder
      Used for paragraphs, descriptions and
      most general interface text. */
   --line-height-body: 1.5;
-
 
   /* =========================================
      SPACING
@@ -247,7 +251,6 @@ Färger, typsnitt, variabler och grundläggande standarder
      major sections of the page. */
   --spacing-2xl: 3rem;
 
-
   /* =========================================
      BORDER RADIUS
      Defines the standard corner rounding
@@ -273,7 +276,7 @@ Färger, typsnitt, variabler och grundläggande standarder
 
 /* Reset: grundinställningar för alla element */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
