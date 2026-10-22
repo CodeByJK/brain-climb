@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fråge-sida</title>
+    <!--Jag valde att kopiera Maja's ide att ha lite css som jag kan ändra sen -->
+    <link rel="stylesheet" href="../css/test-css-frågesida.css">
+    <link rel="stylesheet" href="../css/base.css">
+  </head>
+
+  <body>
+       <main class="quiz-page">
+
+            <!--Frågan innan svaret-->
+            <section class="quiz-question">
+                <header class="quiz-header">
+                    <span class="header-corner">FRÅGA</span>
+                    
+                    <!--Question-number kommer ändras senare med Javascript-->
+                    <div class="numbers">
+                        <div class="question-number">
+                            <p><span>1</span>/10</p>
+                        </div>
+
+                        <!--Timern kommer funka senare med Javascript-->
+                        <div class="timer">
+                            <span>30</span>
+                        </div>
+                    </div>    
+                    <!--Kategori och frågor kommer kopplas till JSON filerna senare.-->
+                    <span class="category">Geografi</span>
+                    <h2 class="question">Vilken är världens största öken?</h2>
+
+                    <!--Baren som visar vilken fråga man är på kommer att läggas till senare med Javascript-->
+                    <div class="question-bar">
+                        <span class="question-number"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <!--Bilden kommer senare ändras till en riktig "score jar" med Javascript-->
+                    <div class="score-jar">
+                        <img src="../assets/img/score-jar.png">
+                    </div>
+
+                    <!--Poängen kommer att kunna ökas senare med Javascript-->
+                    <div class="score">
+                        <p>0 rätt</p>
+                    </div>
+                </header>
+                    <section class="quiz-content">
+
+                        <!--Använder frågorna från figma för test sidan innan vi kopplar json-filen-->
+                        <div class="answers">
+                            <button class="answer">A. Sahara</button>
+                            <button class="answer">B. Antarktis</button>
+                            <button class="answer">C. Gobi öknen</button>
+                            <button class="answer">D. Arabiska öknen</button> 
+                        </div>
+
+                        <p class="instructions">Välj ett svar innan tiden tar slut</p>
+                        <button class="next-question">Nästa Fråga</button>
+                    </section>
+            </section>
+
+            <!--Korrekt svar-->
+            <section class="correct-answer">
+                <header class="correct-header">
+                    <strong>✓</strong>
+                    <h3>Pang på!</h3>
+                    <p>+1 i burken</p>
+                </header>
+                    <span>Visste du?</span>
+                    <p>Antarktis räknas som öken eftersom nederbörden är så låg - och den är cirka 14 miljoner km².</p>
+            </section>
+
+            <!--Inkorrekt svar-->
+            <section class="incorrect-answer">
+                <header class="incorrect-header">
+                    <strong>x</strong>
+                    <h3>Nära, men nej</h3>
+                    <p>Rätt svar är Volga</p>
+                </header>
+                    <span>Visste du?</span>
+                    <p>Volga är omkring 3 500 km lång och rinner ut i Kaspiska havet.</p>
+            </section>
+        </main>
+  </body>
+</html>
