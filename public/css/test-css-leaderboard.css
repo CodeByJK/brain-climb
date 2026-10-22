@@ -67,18 +67,6 @@ body {
     border-radius: var(--border-radius-lg);
 }
 
-.pill {
-    background-color: var(--color-accent);
-    color: var(--color-background-light);
-    padding: 8px 10px;
-    border-radius: 6px 3px 6px 3px;
-    transform: rotate(-1.5deg);
-    font-size: var(--font-size-sm);
-
-    width: fit-content;
-    line-height: 0.5;
-    font-weight: var(--font-weight-bold);
-}
 
 /* Leaderboard listan */
 
