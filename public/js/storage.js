@@ -1,18 +1,42 @@
-
 const STORAGE_KEY = "quiz-results";
+// För Spel in progress:
+const PROGRESS_KEY = "quiz-progress";
 
-export function getResults(){
-    const resultData = localStorage.getItem(STORAGE_KEY);
-    try {
-        return resultData !== null ? JSON.parse(resultData) : [];
-    } catch (error) {
-        console.error("Kunde inte läsa sparade resultat:", error);
-        return [];
-    }
+export function getResults() {
+  const resultData = localStorage.getItem(STORAGE_KEY);
+  try {
+    return resultData !== null ? JSON.parse(resultData) : [];
+  } catch (error) {
+    console.error("Kunde inte läsa sparade resultat:", error);
+    return [];
+  }
 }
 
 export function saveResult(result) {
-    const savdeResults = getResults();
-    const updatedResults = [...savdeResults, result];
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedResults));
+  const savedResults = getResults();
+  const updatedResults = [...savedResults, result];
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedResults));
+}
+
+export function saveProgress(progress) {
+  localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
+}
+
+export function getProgress() {
+  const progressData = localStorage.getItem(PROGRESS_KEY);
+
+  if (progressData === null) {
+    return null;
+  }
+
+  try {
+    return JSON.parse(progressData);
+  } catch (error) {
+    console.error("Kunde inte läsa sparade quizframsteg:", error);
+    return null;
+  }
+}
+
+export function clearProgress() {
+  localStorage.removeItem(PROGRESS_KEY);
 }
