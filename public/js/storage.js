@@ -1,7 +1,7 @@
 
 const STORAGE_KEY = "quiz-results";
 
-export function getResults(){
+export function getSavedResults(){
     const resultData = localStorage.getItem(STORAGE_KEY);
     try {
         return resultData !== null ? JSON.parse(resultData) : [];
@@ -12,7 +12,7 @@ export function getResults(){
 }
 
 export function saveResult(result) {
-    const savdeResults = getResults();
-    const updatedResults = [...savdeResults, result];
+    const savedResults = getSavedResults();
+    const updatedResults = [...savedResults, result];
     localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedResults));
 }

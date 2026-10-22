@@ -37,29 +37,37 @@ function getCurrentQuestion(){
 
 function answerQuestion(selectedIndex){
     const currentQuestion = getCurrentQuestion();
-    let correct = false;
+    if(!currentQuestion) return false;
     const questionId = currentQuestion.id;
 
-    if(selectedIndex === currentQuestion.correctAnswer) {
-        state.score++;
-        correct = true;
-    } else {
-        // Ska klasser och sådant läggas till här?
-    }
+    // Kolla så att användaren inte redan svarat på en fråga
+    const existingAnswer = state.userAnswers.find((answer) => {
+       return answer.questionId === questionId
+    })
 
+    if(existingAnswer) return existingAnswer.isCorrect;
+
+    // Jämför valt svar med rätt svar
+    const isCorrect = selectedIndex === currentQuestion.correctAnswer;
     
-    state.userAnswers.push({ questionId, selectedIndex, correct });
-    console.log(state)
-    return correct;
+    if(isCorrect) {
+        state.score++;
+    } 
 
+    state.userAnswers.push({ questionId, selectedIndex, isCorrect });
+    
+    return isCorrect;
 }
 
-function getScore(){
+function getResult(){
 
-
-    return { score, total }
+    return { 
+        score: state.score, 
+        total: state.questions.length
+    }
 }
 
-console.log(answerQuestion(1))
-console.log(getCurrentQuestion());
-
+getCurrentQuestion();
+answerQuestion(1);
+answerQuestion(1);
+answerQuestion(1);

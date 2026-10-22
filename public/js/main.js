@@ -1,2 +1,2 @@
-import { getResults, saveResult } from "./storage.js";
+import { getSavedResults, saveResult } from "./storage.js";
 
