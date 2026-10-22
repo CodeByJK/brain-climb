@@ -1,20 +1,31 @@
-/* ---------- Knappar (teamets gemensamma) ---------- */
+/* =========================================
+components.css
+Knappar, kort, formulär och andra återanvändbara komponenter
+========================================= */
+
+
+/* Knappar */
 .button {
-  background-color: var(--color-primary);
-  color: var(--color-background-light);
-  border: none;
-  padding: var(--spacing-md) var(--spacing-base);
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-hard);
-  cursor: pointer;
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
+    background-color: var(--color-primary);
+    color: var(--color-background-light);
+    border: none;
+    padding: 20px 12px;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-hard);
+    cursor: pointer;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
 
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    svg {
+        width: 28px;
+    }
+}
 
-  svg {
-    width: 28px;
-  }
+.button:active {
+    translate: 0 4px;
+    box-shadow: 0 3px 0 0 var(--color-shadow);
 }
