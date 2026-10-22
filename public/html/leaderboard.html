@@ -1,192 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leaderboard</title>
     <!-- detta är endast för att påbörja lite styling, ändrar till riktiga variablerna sen -->
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/test-css-leaderboard.css">
-</head>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/test-css-leaderboard.css" />
+  </head>
 
-<body>
+  <body>
     <main class="leaderboard">
-        <section class="section leaderboard-content">
-            
-            <header class="leaderboard-header">
-                <p class="pill">Topplista</p>
-                <h1>Senaste omgångarna</h1>
-                <p>Bäst hittills: Maja, 9 av 10</p>
-            </header>
+      <section class="section leaderboard-content">
+        <header class="leaderboard-header">
+          <p class="pill">Topplista</p>
+          <h1>Senaste omgångarna</h1>
+          <p>Bäst hittills: Maja, 9 av 10</p>
+        </header>
 
-            <div class="img-wrapper">
-                <img src="../assets/img/score-jar-2.png" alt="">
-            </div>
+        <div class="img-wrapper">
+          <img src="../assets/img/score-jar-2.png" alt="" />
+        </div>
 
-            <div class="leaderboard-list-container">
-                <ol class="leaderboard-list">
-                    <li class="leaderboard-row is-current">
-                        <div class="leaderboard-name">
-                            <p>Maja</p>
+        <div class="leaderboard-list-container">
+          <ol class="leaderboard-list">
+            <li class="leaderboard-row is-current">
+              <div class="leaderboard-name">
+                <p>Maja</p>
 
-                            <p class="leaderboard-meta">
-                                <!-- i javascript sätts de riktiga tiderna -->
-                                <time datetime="2026-10-15T17:50">Nyss</time>
-                                - din omgång
-                            </p>
-                        </div>
-                        <div class="leaderboard-track-bar is-current" aria-hidden="true">
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span></span>
-                        </div>
-                        <p class="leaderboard-score">9 <span>/10</span></p>
-                    </li>
-
-                    <li class="leaderboard-row">
-                        <div class="leaderboard-name">
-                            <p>Alexander</p>
-
-                            <p class="leaderboard-meta">
-                                <!-- i javascript sätts de riktiga tiderna -->
-                                <time datetime="2026-10-14">14 oktober</time>
-                            </p>
-                        </div>
-                        <div class="leaderboard-track-bar" aria-hidden="true">
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <p class="leaderboard-score">6 <span>/10</span></p>
-                    </li>
-
-                    <li class="leaderboard-row">
-                        <div class="leaderboard-name">
-                            <p>Saga</p>
-
-                            <p class="leaderboard-meta">
-                                <!-- i javascript sätts de riktiga tiderna -->
-                                <time datetime="2026-10-17">17 oktober</time>
-                            </p>
-                        </div>
-                        <div class="leaderboard-track-bar" aria-hidden="true">
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <p class="leaderboard-score">5 <span>/10</span></p>
-                    </li>
-
-                    <li class="leaderboard-row">
-                        <div class="leaderboard-name">
-                            <p>Frida</p>
-
-                            <p class="leaderboard-meta">
-                                <!-- i javascript sätts de riktiga tiderna -->
-                                <time datetime="2026-10-12">12 oktober</time>
-                            </p>
-                        </div>
-                        <div class="leaderboard-track-bar" aria-hidden="true">
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <p class="leaderboard-score">4 <span>/10</span></p>
-                    </li>
-
-                    <li class="leaderboard-row">
-                        <div class="leaderboard-name">
-                            <p>Niklas</p>
-
-                            <p class="leaderboard-meta">
-                                <!-- i javascript sätts de riktiga tiderna -->
-                                <time datetime="2026-10-10">10 oktober</time>
-                            </p>
-                        </div>
-                        <div class="leaderboard-track-bar" aria-hidden="true">
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <p class="leaderboard-score">2 <span> /10</span></p>
-                    </li>
-                </ol>
-
-                <div class="leaderboard-actions">
-                    <button class="button leaderboard-button">Spela igen
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
-                            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
-                        </svg>
-                    </button>
-                    </div>
-                </div>
-        </section>
-
-        
-        <!-- Ska användas i js för att skapa elementen utan att behöva göra allt för hand i js -->
-        <template id="leaderboard-row-template">
-            <li class="leaderboard-row">
-                <div class="leaderboard-name">
-                    <p></p>
-
-                    <p class="leaderboard-meta">
-                        <!-- i javascript sätts de riktiga tiderna -->
-                        <time datetime="2026-10-10"></time>
-                    </p>
-                </div>
-                <div class="leaderboard-track-bar" aria-hidden="true">
-                    <span class="is-filled"></span>
-                    <span class="is-filled"></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <p class="leaderboard-score"> <span></span></p>
+                <p class="leaderboard-meta">
+                  <!-- i javascript sätts de riktiga tiderna -->
+                  <time datetime="2026-10-15T17:50">Nyss</time>
+                  - din omgång
+                </p>
+              </div>
+              <div class="leaderboard-track-bar is-current" aria-hidden="true">
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span></span>
+              </div>
+              <p class="leaderboard-score">9 <span>/10</span></p>
             </li>
-        </template>
-    </main>
-</body>
 
+            <li class="leaderboard-row">
+              <div class="leaderboard-name">
+                <p>Alexander</p>
+
+                <p class="leaderboard-meta">
+                  <!-- i javascript sätts de riktiga tiderna -->
+                  <time datetime="2026-10-14">14 oktober</time>
+                </p>
+              </div>
+              <div class="leaderboard-track-bar" aria-hidden="true">
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p class="leaderboard-score">6 <span>/10</span></p>
+            </li>
+
+            <li class="leaderboard-row">
+              <div class="leaderboard-name">
+                <p>Saga</p>
+
+                <p class="leaderboard-meta">
+                  <!-- i javascript sätts de riktiga tiderna -->
+                  <time datetime="2026-10-17">17 oktober</time>
+                </p>
+              </div>
+              <div class="leaderboard-track-bar" aria-hidden="true">
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p class="leaderboard-score">5 <span>/10</span></p>
+            </li>
+
+            <li class="leaderboard-row">
+              <div class="leaderboard-name">
+                <p>Frida</p>
+
+                <p class="leaderboard-meta">
+                  <!-- i javascript sätts de riktiga tiderna -->
+                  <time datetime="2026-10-12">12 oktober</time>
+                </p>
+              </div>
+              <div class="leaderboard-track-bar" aria-hidden="true">
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p class="leaderboard-score">4 <span>/10</span></p>
+            </li>
+
+            <li class="leaderboard-row">
+              <div class="leaderboard-name">
+                <p>Niklas</p>
+
+                <p class="leaderboard-meta">
+                  <!-- i javascript sätts de riktiga tiderna -->
+                  <time datetime="2026-10-10">10 oktober</time>
+                </p>
+              </div>
+              <div class="leaderboard-track-bar" aria-hidden="true">
+                <span class="is-filled"></span>
+                <span class="is-filled"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p class="leaderboard-score">2 <span> /10</span></p>
+            </li>
+          </ol>
+
+          <div class="leaderboard-actions">
+            <button class="button leaderboard-button">
+              Spela igen
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 -960 960 960"
+                fill="currentColor"
+              >
+                <path
+                  d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ska användas i js för att skapa elementen utan att behöva göra allt för hand i js -->
+      <template id="leaderboard-row-template">
+        <li class="leaderboard-row">
+          <div class="leaderboard-name">
+            <p></p>
+
+            <p class="leaderboard-meta">
+              <!-- i javascript sätts de riktiga tiderna -->
+              <time datetime="2026-10-10"></time>
+            </p>
+          </div>
+          <div class="leaderboard-track-bar" aria-hidden="true">
+            <span class="is-filled"></span>
+            <span class="is-filled"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <p class="leaderboard-score"><span></span></p>
+        </li>
+      </template>
+    </main>
+  </body>
 </html>
