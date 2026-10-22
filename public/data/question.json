@@ -1,112 +1,92 @@
 [
   {
     "id": 1,
-    "question": "Which of these animals has three hearts?",
-    "answers": [
-      "Shark",
-      "Octopus",
-      "Crocodile",
-      "Penguin"
-    ],
-    "correctAnswer": 1
+    "question": "Vilket av dessa djur har tre hjärtan?",
+    "answers": ["Haj", "Bläckfisk", "Krokodil", "Pingvin"],
+    "correctAnswer": 1,
+    "explanation": "Bläckfisken har två hjärtan som pumpar blod genom gälarna och ett som pumpar det ut i resten av kroppen."
   },
   {
     "id": 2,
-    "question": "Which country has more pyramids than Egypt?",
-    "answers": [
-      "Mexico",
-      "Sudan",
-      "Peru",
-      "Jordan"
-    ],
-    "correctAnswer": 1
+    "question": "Vilket land har fler pyramider än Egypten?",
+    "answers": ["Mexiko", "Sudan", "Peru", "Jordanien"],
+    "correctAnswer": 1,
+    "explanation": "Sudan har runt 200 forntida pyramider, byggda av kungariket Kush. Egypten har ungefär 120."
   },
   {
     "id": 3,
-    "question": "What is the only mammal capable of true flight?",
-    "answers": [
-      "Flying squirrel",
-      "Sugar glider",
-      "Bat",
-      "Colugo"
-    ],
-    "correctAnswer": 2
+    "question": "Vilket däggdjur är det enda som kan flyga aktivt?",
+    "answers": ["Flygekorre", "Sockerglidare", "Fladdermus", "Kologon"],
+    "correctAnswer": 2,
+    "explanation": "Fladdermöss flaxar med vingarna och flyger på riktigt. Flygekorrar, sockerglidare och kologoner kan bara glidflyga."
   },
   {
     "id": 4,
-    "question": "Which of these is botanically classified as a berry?",
-    "answers": [
-      "Strawberry",
-      "Raspberry",
-      "Blackberry",
-      "Banana"
-    ],
-    "correctAnswer": 3
+    "question": "Vilken av dessa frukter klassificeras botaniskt som ett bär?",
+    "answers": ["Jordgubbe", "Hallon", "Björnbär", "Banan"],
+    "correctAnswer": 3,
+    "explanation": "Botaniskt är ett bär en frukt som bildas av en enda blomma med en fruktämne. Bananen uppfyller det, men inte jordgubben, hallonet eller björnbäret."
   },
   {
     "id": 5,
-    "question": "What happens to the Eiffel Tower during hot summer weather?",
+    "question": "Vad händer med Eiffeltornet när det är varmt på sommaren?",
     "answers": [
-      "It becomes slightly taller",
-      "It changes color",
-      "It leans toward the sea",
-      "It becomes lighter"
+      "Det blir lite högre",
+      "Det byter färg",
+      "Det lutar mot havet",
+      "Det blir lättare"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 0,
+    "explanation": "Järnet utvidgas i värmen, så tornet kan bli upp till ungefär 15 centimeter högre."
   },
   {
     "id": 6,
-    "question": "Which planet has a day that is longer than its year?",
-    "answers": [
-      "Mars",
-      "Venus",
-      "Jupiter",
-      "Neptune"
-    ],
-    "correctAnswer": 1
+    "question": "Vilken planet har ett dygn som är längre än dess år?",
+    "answers": ["Mars", "Venus", "Jupiter", "Neptunus"],
+    "correctAnswer": 1,
+    "explanation": "Venus snurrar så långsamt att ett varv runt sin egen axel tar cirka 243 jorddygn, medan ett varv runt solen tar cirka 225."
   },
   {
     "id": 7,
-    "question": "Which of these famous historical figures was born first?",
+    "question": "Vilken av dessa berömda historiska personer föddes först?",
     "answers": [
-      "Cleopatra",
+      "Kleopatra",
       "Julius Caesar",
-      "Alexander the Great",
+      "Alexander den store",
       "Augustus"
     ],
-    "correctAnswer": 2
+    "correctAnswer": 2,
+    "explanation": "Alexander den store föddes år 356 f.Kr., över 250 år före Julius Caesar, Kleopatra och Augustus."
   },
   {
     "id": 8,
-    "question": "What is the fear of long words humorously called?",
+    "question": "Vad kallas rädslan för långa ord, skämtsamt?",
     "answers": [
       "Hippopotomonstrosesquipedaliophobia",
-      "Chronophobia",
-      "Logophobia",
-      "Sesquipedalophobia"
+      "Kronofobi",
+      "Logofobi",
+      "Glossofobi"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 0,
+    "explanation": "Namnet är ett skämt: ett extremt långt ord för rädslan för långa ord. 'Sesquipedalis' betyder 'en och en halv fot lång' på latin."
   },
   {
     "id": 9,
-    "question": "Which of these foods can last for thousands of years without spoiling when properly stored?",
-    "answers": [
-      "Cooked rice",
-      "Fresh cheese",
-      "Honey",
-      "Peanut butter"
-    ],
-    "correctAnswer": 2
+    "question": "Vilket av dessa livsmedel kan hålla i tusentals år utan att bli dåligt om det förvaras på rätt sätt?",
+    "answers": ["Kokt ris", "Färskost", "Honung", "Jordnötssmör"],
+    "correctAnswer": 2,
+    "explanation": "Honung innehåller väldigt lite vatten och är lite sur, så bakterier kan inte växa i den. Ätbar honung har hittats i forntida egyptiska gravar."
   },
   {
     "id": 10,
-    "question": "If you shuffle a standard deck of 52 playing cards thoroughly, what is remarkable about the resulting order?",
+    "question": "Om du blandar en vanlig kortlek med 52 spelkort ordentligt, vad är då anmärkningsvärt med den nya ordningen?",
     "answers": [
-      "It will probably match an order used before",
-      "It is likely a sequence that has never existed before",
-      "It will always contain four cards of the same suit together",
-      "It will have the same number of red and black cards in every half"
+      "Den kommer troligen att motsvara en ordning som har förekommit tidigare",
+      "Det är sannolikt en ordning som aldrig har förekommit tidigare",
+      "Den kommer alltid att innehålla fyra kort av samma färg i följd",
+      "Den kommer att ha lika många röda som svarta kort i varje halva"
     ],
-    "correctAnswer": 1
+    "correctAnswer": 1,
+    "explanation": "En kortlek kan ordnas på ungefär 8 × 10⁶⁷ sätt, så en väl blandad kortlek har nästan säkert en ordning som ingen har sett förut."
   }
 ]

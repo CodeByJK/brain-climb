@@ -9,11 +9,23 @@ const selectors = {
   timer: '[role="timer"] span',
   error: "#error-message",
   result: "#score-text",
+  feedbackCorrect: ".correct-answer",
+  feedbackIncorrect: ".incorrect-answer",
+  nextButton: ".next-question",
 };
 
 const letters = ["A", "B", "C", "D", "E", "F"];
 
 const getElement = (selector) => document.querySelector(selector);
+
+// Döljer feedback och "Nästa fråga" inför en ny fråga
+function hideFeedback() {
+  [selectors.feedbackCorrect, selectors.feedbackIncorrect, selectors.nextButton]
+    .map(getElement)
+    .forEach((element) => {
+      if (element) element.hidden = true;
+    });
+}
 
 /* ---------- Hjälpfunktion utan DOM ---------- */
 
@@ -36,12 +48,12 @@ export function renderQuestion(question, index, total, onAnswer) {
   // Elementen finns inte på alla sidor
   if (!textElement || !optionsElement) return;
 
+  hideFeedback();
+
   textElement.textContent = question.question;
 
   if (counterElement) {
     counterElement.textContent = `Fråga ${index + 1} av ${total}`;
-    // Följer ni designen ("1/10") i stället:
-    // counterElement.textContent = `${index + 1}/${total}`;
   }
 
   // Töm gamla alternativ (även testknapparna i HTML:en)
@@ -50,8 +62,8 @@ export function renderQuestion(question, index, total, onAnswer) {
   question.answers.forEach((answer, answerIndex) => {
     const button = document.createElement("button");
     button.type = "button";
-    button.className = "answer"; // samma klass som i HTML:en, så CSS:en gäller
-    button.textContent = `${letters[answerIndex]}. ${answer}`; // textContent, inte innerHTML
+    button.className = "answer";
+    button.textContent = `${letters[answerIndex]}. ${answer}`;
     button.addEventListener("click", () => onAnswer(answerIndex));
     optionsElement.append(button);
   });
@@ -72,7 +84,58 @@ export function renderError(message) {
   errorElement.hidden = false;
 }
 
-// renderFeedback(...) byggs i feedback-ticketen
+// selectedIndex är null om tiden tog slut innan användaren svarade
+export function renderFeedback(question, selectedIndex, isCorrect) {
+  const optionsElement = getElement(selectors.options);
+  const section = getElement(
+    isCorrect ? selectors.feedbackCorrect : selectors.feedbackIncorrect,
+  );
+  const nextButton = getElement(selectors.nextButton);
+
+  if (!optionsElement || !section) return;
+
+  // Lås alternativen och markera rätt och fel med både färg och tecken
+  optionsElement.querySelectorAll("button").forEach((button, index) => {
+    button.disabled = true;
+
+    if (index === question.correctAnswer) {
+      button.classList.add("is-correct");
+      button.textContent += " ✓";
+    } else if (index === selectedIndex) {
+      button.classList.add("is-wrong");
+      button.textContent += " ✗";
+    }
+  });
+
+  // Vid fel svar: rubrik och vilket svar som var rätt
+  if (!isCorrect) {
+    const title = section.querySelector("h3");
+    const correctText = section.querySelector("header p");
+    const correctAnswer = question.answers[question.correctAnswer];
+
+    if (title) {
+      title.textContent =
+        selectedIndex === null ? "Tiden tog slut" : "Nära, men nej";
+    }
+    if (correctText) {
+      correctText.textContent = `Rätt svar är ${correctAnswer}`;
+    }
+  }
+
+  // Förklaringen är <p> direkt under sektionen (efter "Visste du?")
+  const explanation = section.querySelector(":scope > p");
+  if (explanation) {
+    explanation.textContent = question.explanation ?? "";
+  }
+
+  section.hidden = false;
+
+  // Visa "Nästa fråga" och flytta fokus dit, så att tangentbordet fungerar
+  if (nextButton) {
+    nextButton.hidden = false;
+    nextButton.focus();
+  }
+}
 
 /* ---------- Resultatsidan ---------- */
 
