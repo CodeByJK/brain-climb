@@ -6,6 +6,16 @@ const PROGRESS_KEY = "quiz-progress";
 // För spelarens namn:
 const NAME_KEY = "quiz-player-name";
 
+
+/* 
+
+objektet som sparas ser ut såhär:
+[{ name: "Maja", score: 7, total: 10, date: "2026-10-23T09:15:00.000Z" }, {...}];
+
+ */  
+
+// Hämta och spara resultatet
+
 export function getResults() {
   const resultData = localStorage.getItem(STORAGE_KEY);
   try {
@@ -22,6 +32,9 @@ export function saveResult(result) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedResults));
 }
 
+
+
+// Hämta och spara status i spelet just nu (progress)
 export function saveProgress(progress) {
   localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
 }
@@ -45,6 +58,8 @@ export function clearProgress() {
   localStorage.removeItem(PROGRESS_KEY);
 }
 
+
+// Spara och hämta namnet på spelaren
 export function savePlayerName(name){
   localStorage.setItem(NAME_KEY, JSON.stringify(name));
 }
