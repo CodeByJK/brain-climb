@@ -12,9 +12,12 @@ body {
 }
 
 .quiz-page {
-    width: 80%;
+    width: 100%;
     margin: auto;
     background-color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
 }
 
 .quiz-question {
@@ -27,8 +30,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 200px;
-    padding: 10px 12px 48px;
+    min-height: 12.5rem;
+    padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) ;
     background-color: var(--color-background-mint);
     border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
 
@@ -64,10 +67,10 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 40px;
-        height: 40px;
-        margin-top: -8px;
-        border: 2px solid var(--color-accent);
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-top: -0.5rem;
+        border: 0.125rem solid var(--color-accent);
         border-radius: 50%;
         color: var(--color-accent-coral-dark);
         font-size: var(--font-size-sm);
@@ -75,30 +78,32 @@ body {
 
     .category {
         align-self: flex-start;
-        margin-top: 15px;
-        padding: 3px 6px;
-        border-radius: var(--border-radius-sm);
+        margin-top: 1rem;
+        padding: 0.19rem 0.375rem;
+        border-radius: 0.19rem var(--border-radius-sm) 0.19rem var(--border-radius-sm);
         background-color: var(--color-text-primary);
         color: var(--color-background);
         font-size: var(--font-size-sm);
+        transform: rotate(-3deg);
     }
 
     .question {
-        max-width: 180px;
+        max-width: 50%;
         margin-top: 16px;
         color: var(--color-text-primary);
-        font-size: var(--font-size-lg);
+        font-size: var(--font-size-xl);
+        font-weight: var(--font-weight-bold);
         line-height: var(--line-height-heading);
     }
 
     .question-bar {
         position: absolute;
-        right: 12px;
-        top: 70px ; 
-        left: 12px;
+        right: 0.75rem;
+        top: 4.5rem ; 
+        left: 0.75rem;
         display: flex;
         gap: var(--spacing-xs);
-        height: 3px;
+        height: 0.19rem;
 
         span {
             width: 100%;
@@ -114,21 +119,21 @@ body {
 
     .score-jar {
         position: absolute;
-        bottom: 25%;
-        right: 12px;
+        bottom: 20%;
+        right: 0.75rem;
 
         img {
             display: block;
-            width: 33px;
-            height: 80px;
+            width: auto;
+            height: 5rem;
             object-fit: contain;
         }
     }
 
     .score {
         position: absolute;
-        right: 12px;
-        bottom: 12px;
+        right: 0.75rem;
+        bottom: 0.75rem;
         color: var(--color-text-secondary);
         font-size: var(--font-size-sm);
         font-weight: var(--font-weight-bold);
@@ -141,6 +146,12 @@ body {
     padding: 12px;
 }
 
+.quiz-question , 
+.quiz-content {
+    flex: 1;
+}
+
+
 .answers {
     display: flex;
     flex-direction: column;
@@ -148,9 +159,9 @@ body {
 }
 
 .answer {
-    width: 100%;
-    min-height: 35px;
-    padding: 8px;
+    width: auto;
+    min-height: 3rem;
+    padding: 1rem;
     border: 1px  var(--color-surface-muted);
     border-radius: var(--border-radius-sm);
     background-color: var(--color-background-light);
@@ -181,17 +192,23 @@ body {
 
 .next-question {
     width: 100%;
-    height: 35px;
-    padding: 9px;
+    min-height: 2.2rem;
     border: none;
     border-radius: var(--border-radius-lg);
-    background-color: var(--color-background-mint);
+    background-color: var(--color-surface-muted);
     color: var(--color-text-muted);
     font-family: inherit;
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-bold);
     cursor: pointer;
 }
+.quiz-footer {
+  margin-top: auto;
+  .next-question {
+    align-self: center;
+  }
+}
+
 .correct-answer,
 .incorrect-answer {
     display: block;
@@ -246,4 +263,196 @@ body {
     padding: 0 9px 10px;
     font-size: var(--font-size-sm);
     line-height: var(--line-height-body);
+}
+
+/* hidden ska alltid dölja, även om elementet har en egen display */
+[hidden] {
+  display: none !important;
+}
+
+.answer.is-correct {
+  background-color: var(--color-surface-mint);
+  border: 2px solid var(--color-secondary);
+}
+
+.answer.is-wrong {
+  border: 2px solid var(--color-accent);
+}
+
+.answer:disabled {
+  cursor: default;
+}
+
+
+
+/* Surfplatta – från 768 px */
+@media (min-width: 48rem) {
+.container {
+padding-inline: var(--spacing-lg);
+}
+
+    .quiz-header {
+        min-height: 28rem;
+        border-radius: var(--border-radius-lg);
+        width: 85%;
+        margin: var(--spacing-2xl);
+        align-self: center;
+        margin-bottom: var(--spacing-sm);
+
+        .score-jar {
+            top: 28%; 
+            left: 50%;
+            right: auto;
+            transform: translateX(-50%);
+
+            img {
+                height: 12rem;
+                width: auto;
+            }
+        }
+
+        .score {
+            bottom: 20%;
+            left: 50%;
+            right: auto;
+            transform: translateX(-50%);
+        }
+
+        .category {
+            position: absolute;
+            left: 0.75rem;
+            bottom: 4rem;
+            margin-top: 0;
+        }
+
+        .question {
+            max-width: 100%;
+            position: absolute;
+            bottom: 1.5rem;
+            left: 0.75rem;
+        }
+    }
+
+    .answers {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+        width: 85%;
+        align-self: center;
+    }
+
+    .quiz-footer {
+        width: 85%;
+        align-self: center;
+    }
+
+
+}
+
+/* Laptop – från 1024 px */
+@media (min-width: 64rem) {
+.container {
+padding-inline: var(--spacing-xl);
+}
+
+    .quiz-question {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: var(--spacing-xl);
+        margin: 0 var(--spacing-2xl);
+    }
+
+    .quiz-header {
+        margin: 0;
+        margin-left: 7.5%;
+        min-height: 100%;
+        width: 85%;
+        align-self: flex-end;
+        border-radius: 2rem;
+        padding: var(--spacing-xl) var(--spacing-2xl);
+
+        .question-number {
+
+            p{
+                font-size: var(--font-size-xl);
+            }
+            span {
+                font-size: 6rem;
+            }
+        }
+
+        .timer {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-width: 0.2rem;
+            font-size: var(--font-size-lg);
+        }
+
+        .question-bar {
+        top: 22%;
+        right: var(--spacing-2xl);
+        left: var(--spacing-2xl);
+        height: 0.3rem;
+        gap: var(--spacing-xs);
+        }
+
+        .score-jar {
+            top: 35%;
+
+            img {
+                height: 16rem;
+                width: auto;
+            }
+        }
+
+        .score {
+            bottom: 25%;
+            font-size: var(--font-size-base);
+        }
+
+        .category {
+            bottom: 25%;
+            left: var(--spacing-2xl);
+            padding: 0.375rem 0.75rem;
+            font-size: var(--spacing-base);
+            
+        }
+
+        .question {
+            bottom: 2rem;
+            max-width: 80%;
+            left: var(--spacing-2xl);
+            font-size: var(--font-size-3xl);
+        }
+    }
+
+    .quiz-content {
+        padding: 0;
+
+        .answers {
+            display:flex;
+            flex-direction: column;
+            margin-top: 4rem; 
+        }
+
+        .answer {
+            min-height: 4rem;
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-medium);
+        }
+    }
+
+    .next-question {
+        min-height: 3rem;
+        border-radius: 2rem;
+        font-size: var(--font-size-lg)
+    }
+
+}
+
+/* Stor skärm – från 1200 px */
+@media (min-width: 80rem) {
+.container {
+padding-inline: var(--spacing-2xl);
+}
 }
