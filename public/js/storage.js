@@ -1,6 +1,10 @@
+// För slut resultat:
 const STORAGE_KEY = "quiz-results";
 // För Spel in progress:
 const PROGRESS_KEY = "quiz-progress";
+
+// För spelarens namn:
+const NAME_KEY = "quiz-player-name";
 
 export function getResults() {
   const resultData = localStorage.getItem(STORAGE_KEY);
@@ -39,4 +43,21 @@ export function getProgress() {
 
 export function clearProgress() {
   localStorage.removeItem(PROGRESS_KEY);
+}
+
+export function savePlayerName(name){
+  localStorage.setItem(NAME_KEY, JSON.stringify(name));
+}
+
+export function getPlayerName(){
+  const playerName = localStorage.getItem(NAME_KEY);
+
+  if(playerName === null) return null;
+
+  try {
+    return JSON.parse(playerName);
+  } catch (error) {
+    console.error("Kunde inte hämta spelarens namn: ", error);
+    return null;
+  }
 }
