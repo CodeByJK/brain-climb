@@ -106,8 +106,13 @@ body {
         color: var(--color-secondary);
     }
 
-    .leaderboard-row.is-current .leaderboard-track-bar span {
+    .leaderboard-row.is-current {
+        background-color: var(--color-secondary);
         color: #fff;
+    }
+
+    .leaderboard-row.is-current .leaderboard-track-bar span {
+        background-color: #fff;
     }
 }
 
@@ -150,7 +155,11 @@ body {
     }
 }
 
-.leaderboard-track-bar.is-current {
+.leaderboard-row.is-current .leaderboard-track-bar span:not(.is-filled) {
+    opacity: 0.4;
+}
+
+/* .leaderboard-track-bar.is-current {
     span {
         width: 5px;
         height: 16px;
@@ -163,7 +172,7 @@ body {
         background-color: #fff;
         opacity: 1;
     }
-}
+} */
 
 /* Buttons */
 

@@ -89,13 +89,13 @@ export function renderLeaderboard(results) {
         return;
     }
 
-    results.at(-1).isCurrent = true;
+    const latest = results.at(-1);
 
     const sorted = sortByScore(results);
 
     const best = sorted[0];
     bestText.textContent = `Bäst hittills: ${best.name}, ${best.score} av ${best.total}`;
 
-    const rows = sorted.map((result) => createRow(result));
+    const rows = sorted.map((result) => createRow({ ...result, isCurrent: result === latest }));
     list.replaceChildren(...rows);
 }
