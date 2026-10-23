@@ -106,8 +106,7 @@ body {
         color: var(--color-secondary);
     }
 
-    .leaderboard-row.is-current {
-        background-color: var(--color-secondary);
+    .leaderboard-row.is-current .leaderboard-track-bar span {
         color: #fff;
     }
 }
@@ -156,7 +155,7 @@ body {
         width: 5px;
         height: 16px;
         border-radius: 2px;
-        opacity: 0.25;
+        opacity: 0.4;
         background-color: #fff;
     }
 
