@@ -6,34 +6,40 @@ import {
   getCurrentQuestion,
   getState,
   nextQuestion,
-  answerQuestion
+  answerQuestion,
 } from "../quiz.js";
 
-import {
-  getProgress,
-  saveProgress
-} from "../storage.js";
+import { getProgress, saveProgress } from "../storage.js";
 
 import {
   renderQuestion,
   renderError,
-  renderFeedback
+  renderFeedback,
+  renderTime,
 } from "../render.js";
 
+import { startTimer } from "../timer.js";
+
+
+const SECONDS_PER_QUESTION = 30;
 
 // Visar den aktuella frågan
 function showQuestion() {
-  const state = getState();
-  const question = getCurrentQuestion();
+  const { currentQuestionIndex, questions } = getState();
 
   renderQuestion(
-    question,
-    state.currentQuestionIndex,
-    state.questions.length,
+    getCurrentQuestion(),
+    currentQuestionIndex,
+    questions.length,
     handleAnswer
   );
-}
 
+  startTimer(
+    SECONDS_PER_QUESTION,
+    renderTime,
+    () => handleAnswer(null)
+  );
+}
 
 // Hanterar användarens svar
 function handleAnswer(selectedIndex) {
@@ -45,7 +51,6 @@ function handleAnswer(selectedIndex) {
   renderFeedback(question, selectedIndex, isCorrect);
 }
 
-
 // Går vidare till nästa fråga
 function handleNext() {
   const hasNextQuestion = nextQuestion();
@@ -54,7 +59,6 @@ function handleNext() {
     showQuestion();
   }
 }
-
 
 // Startar eller återställer quizet
 export async function initQuizPage() {
@@ -76,7 +80,6 @@ export async function initQuizPage() {
     }
 
     showQuestion();
-
   } catch (error) {
     console.error(error);
     renderError("Kunde inte ladda frågorna");

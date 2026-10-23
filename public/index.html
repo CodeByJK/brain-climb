@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fyll burken</title>
-    <link rel="stylesheet" href="../css/base.css" />
-    <link rel="stylesheet" href="../css/layout.css" />
-    <link rel="stylesheet" href="../css/components.css" />
-    <link rel="stylesheet" href="../css/homepage-test.css" />
-    <script type="module" src="../js/main.js"></script>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/homepage-test.css" />
+    <script type="module" src="js/main.js"></script>
   </head>
   <body data-page="start">
     <a class="skip-link" href="#main">Hoppa till innehållet</a>
@@ -16,7 +16,7 @@
     <main id="main">
       <section
         id="start-view"
-        class="view start"
+        class="start"
         aria-labelledby="start-heading"
       >
         <div class="start__content">
@@ -38,7 +38,7 @@
             </div>
             <div class="facts__item">
               <dt>Ämnen</dt>
-              <dd>Geografi, Rymden</dd>
+              <dd>Blandat</dd>
             </div>
           </dl>
 
@@ -69,56 +69,10 @@
           </button>
         </div>
 
-        <!-- Burken är dekoration, 10 fack = 10 frågor. JS lägger till klassen "jar__slot--filled" -->
-        <div class="jar" aria-hidden="true">
-          <div class="jar__lid"></div>
-          <div class="jar">
-            <img src="../assets/img/score-jar-2.png" alt="" />
-          </div>
+        <div class="jar">
+          <img src="assets/img/score-jar-2.png" alt="" />
         </div>
       </section>
-
-      <section
-        id="question-view"
-        class="view"
-        aria-labelledby="question-heading"
-        hidden
-      >
-        <h2 id="question-heading" tabindex="-1">
-          Fråga <span id="question-number"></span> av
-          <span id="question-total"></span>
-        </h2>
-        <p>Tid kvar: <span id="timer" role="timer">20</span> sek</p>
-
-        <form id="answer-form">
-          <fieldset>
-            <legend id="question-text"></legend>
-            <div id="options"></div>
-          </fieldset>
-          <button type="submit" class="button">Svara</button>
-        </form>
-
-        <p id="feedback" aria-live="polite"></p>
-      </section>
-
-      <section
-        id="result-view"
-        class="view"
-        aria-labelledby="result-heading"
-        hidden
-      >
-        <h2 id="result-heading" tabindex="-1">Ditt resultat</h2>
-        <p id="score-text"></p>
-        <p id="feedback-text"></p>
-        <button type="button" id="restart-button" class="button">
-          Spela igen
-        </button>
-
-        <h3>Tidigare resultat</h3>
-        <ol id="result-history"></ol>
-      </section>
-
-      <p id="error-message" role="alert" hidden></p>
     </main>
   </body>
 </html>
