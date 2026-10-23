@@ -18,8 +18,8 @@
             
             <header class="leaderboard-header">
                 <p class="pill">Topplista</p>
-                <h1>Senaste omgångarna</h1>
-                <p>Bäst hittills: Maja, 9 av 10</p>
+                <h1>Bästa omgångarna</h1>
+                <p class="leaderboard-best"></p>
             </header>
 
             <div class="img-wrapper">
@@ -28,6 +28,9 @@
 
             <div class="leaderboard-list-container">
                 <ol class="leaderboard-list" role="list"></ol>
+
+                <!-- Empty state -->
+                 <p class="leaderboard-empty" hidden>Inga omgångar än...</p>
 
                 <div class="leaderboard-actions">
                     <button class="button leaderboard-button">Spela igen
@@ -47,8 +50,8 @@
                     <p class="leaderboard-player"></p>
 
                     <p class="leaderboard-meta">
-                        <!-- i javascript sätts de riktiga tiderna -->
-                        <time datetime="2026-10-10"></time>
+                        <time></time>
+                        <span class="leaderboard-current-label" hidden> - din omgång</span>
                     </p>
                 </div>
                 <div class="leaderboard-track-bar" aria-hidden="true"></div>
@@ -66,8 +69,12 @@
             import { renderLeaderboard } from "../js/renderLeaderboard.js";
             import { getResults } from "../js/storage.js"
           
-          
-            renderLeaderboard(getResults());
+            const testResults = [
+    { name: "Maja", score: 9, total: 10, date: "2026-10-23T09:15:00.000Z" },
+    { name: "Alexander", score: 6, total: 10, date: "2026-10-14T18:00:00.000Z" },
+    { name: "Saga", score: 0, total: 10, date: "2026-10-17T12:00:00.000Z" },
+  ];
+            renderLeaderboard(testResults);
           </script>
     </main>
 </body>

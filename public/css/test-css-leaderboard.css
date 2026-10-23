@@ -59,6 +59,11 @@ body {
     margin-bottom: var( --spacing-xl);
 }
 
+.leaderboard-empty {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
 .leaderboard-list-container {
     grid-area: list;
     background-color: var(--color-background-light);
