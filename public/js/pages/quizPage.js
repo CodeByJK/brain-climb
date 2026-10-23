@@ -5,6 +5,7 @@ import {
   restoreQuiz,
   getCurrentQuestion,
   getState,
+  getResult,
   nextQuestion,
   answerQuestion,
 } from "../quiz.js";
@@ -16,9 +17,10 @@ import {
   renderError,
   renderFeedback,
   renderTime,
+  renderScore,
 } from "../render.js";
 
-import { startTimer } from "../timer.js";
+import { startTimer, stopTimer } from "../timer.js";
 
 
 const SECONDS_PER_QUESTION = 30;
@@ -43,12 +45,19 @@ function showQuestion() {
 
 // Hanterar användarens svar
 function handleAnswer(selectedIndex) {
+  stopTimer();
+
   const question = getCurrentQuestion();
   const isCorrect = answerQuestion(selectedIndex);
 
   saveProgress(getState());
 
-  renderFeedback(question, selectedIndex, isCorrect);
+  renderScore(getResult().score);
+
+  const { currentQuestionIndex, questions } = getState();
+  const isLastQuestion = currentQuestionIndex === questions.length - 1;
+
+  renderFeedback(question, selectedIndex, isCorrect, isLastQuestion);
 }
 
 // Går vidare till nästa fråga
