@@ -24,22 +24,22 @@ RESPONSIVE LAYOUT
 Mobile first
 ========================================= */
 
-/* Surfplatta – från 600 px */
-@media (min-width: 600px) {
+/* Surfplatta – från 768 px */
+@media (min-width: 48rem) {
 .container {
 padding-inline: var(--spacing-lg);
 }
 }
 
-/* Laptop – från 900 px */
-@media (min-width: 900px) {
+/* Laptop – från 1024 px */
+@media (min-width: 64rem) {
 .container {
 padding-inline: var(--spacing-xl);
 }
 }
 
 /* Stor skärm – från 1200 px */
-@media (min-width: 1200px) {
+@media (min-width: 80rem) {
 .container {
 padding-inline: var(--spacing-2xl);
 }
