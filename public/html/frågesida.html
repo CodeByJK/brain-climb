@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../css/base.css">
   </head>
 
-  <body>
+  <body data-page="quiz">
        <main class="quiz-page">
          <p id="error-message" role="alert" hidden></p>
 
@@ -35,9 +35,6 @@
                     <!--Kategori och frågor kommer kopplas till JSON filerna senare.-->
                     <span class="category">Geografi</span>
                     <h2 class="question">Vilken är världens största öken?</h2>
-
-                    <!-- Visas om frågorna inte kan laddas -->
-                    <p id="error-message" role="alert" hidden></p>
 
                     <!--Baren som visar vilken fråga man är på kommer att läggas till senare med Javascript-->
                     <div class="question-bar">
@@ -76,7 +73,7 @@
 
                     <div class="quiz-bottom">
                         <p class="instructions">Välj ett svar innan tiden tar slut</p>
-                        <button class="next-question">Nästa Fråga</button>
+                        <button type="button" id="next-button" class="next-question" hidden>Nästa Fråga</button>
                     </section>
             </section>
 
