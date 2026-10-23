@@ -8,7 +8,8 @@
 "Krokodil",
 "Pingvin"
 ],
-"correctAnswer": 1
+"correctAnswer": 1,
+"explanation": "Bläckfisken har två hjärtan som pumpar blod genom gälarna och ett som pumpar det ut i resten av kroppen."
 },
 {
 "id": 2,
@@ -19,7 +20,8 @@
 "Peru",
 "Jordanien"
 ],
-"correctAnswer": 1
+"correctAnswer": 1,
+"explanation": "Sudan har runt 200 forntida pyramider, byggda av kungariket Kush. Egypten har ungefär 120."
 },
 {
 "id": 3,
@@ -30,7 +32,8 @@
 "Fladdermus",
 "Kologon"
 ],
-"correctAnswer": 2
+"correctAnswer": 2,
+"explanation": "Fladdermöss flaxar med vingarna och flyger på riktigt. De andra djuren kan bara glidflyga."
 },
 {
 "id": 4,
@@ -41,7 +44,8 @@
 "Björnbär",
 "Banan"
 ],
-"correctAnswer": 3
+"correctAnswer": 3,
+"explanation": "Botaniskt är ett bär en frukt som bildas av en enda blomma med ett fruktämne. Bananen uppfyller det, men inte jordgubben, hallonet eller björnbäret."
 },
 {
 "id": 5,
@@ -52,7 +56,8 @@
 "Det lutar mot havet",
 "Det blir lättare"
 ],
-"correctAnswer": 0
+"correctAnswer": 0,
+"explanation": "Järnet utvidgas i värmen, så tornet kan bli upp till ungefär 15 centimeter högre."
 },
 {
 "id": 6,
@@ -63,7 +68,8 @@
 "Jupiter",
 "Neptunus"
 ],
-"correctAnswer": 1
+"correctAnswer": 1,
+"explanation": "Venus snurrar så långsamt att ett varv runt sin egen axel tar cirka 243 jorddygn, medan ett varv runt solen tar cirka 225."
 },
 {
 "id": 7,
@@ -74,7 +80,8 @@
 "Alexander den store",
 "Augustus"
 ],
-"correctAnswer": 2
+"correctAnswer": 2,
+"explanation": "Alexander den store föddes år 356 f.Kr., över 250 år före Julius Caesar, Kleopatra och Augustus."
 },
 {
 "id": 8,
@@ -83,9 +90,10 @@
 "Hippopotomonstrosesquipedaliophobia",
 "Kronofobi",
 "Logofobi",
-"Sesquipedalofobi"
+"Glossofobi"
 ],
-"correctAnswer": 0
+"correctAnswer": 0,
+"explanation": "Namnet är ett skämt: ett extremt långt ord för rädslan för långa ord. Det latinska ordet sesquipedalis betyder en och en halv fot lång."
 },
 {
 "id": 9,
@@ -96,7 +104,8 @@
 "Honung",
 "Jordnötssmör"
 ],
-"correctAnswer": 2
+"correctAnswer": 2,
+"explanation": "Honung innehåller väldigt lite vatten och är lite sur, så bakterier kan inte växa i den. Ätbar honung har hittats i forntida egyptiska gravar."
 },
 {
 "id": 10,
@@ -107,6 +116,7 @@
 "Den kommer alltid att innehålla fyra kort av samma färg i följd",
 "Den kommer att ha lika många röda som svarta kort i varje halva"
 ],
-"correctAnswer": 1
+"correctAnswer": 1,
+"explanation": "En kortlek kan ordnas på ungefär 8 × 10⁶⁷ sätt, så en väl blandad kortlek har nästan säkert en ordning som ingen har sett förut."
 }
 ]

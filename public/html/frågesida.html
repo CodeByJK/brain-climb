@@ -13,6 +13,7 @@
 
   <body>
        <main class="quiz-page">
+         <p id="error-message" role="alert" hidden></p>
 
             <!--Frågan innan svaret-->
             <section class="quiz-question">
@@ -72,12 +73,13 @@
                         </div>
 
                         <p class="instructions">Välj ett svar innan tiden tar slut</p>
-                        <button class="next-question">Nästa Fråga</button>
+                        <button type="button" class="next-question" hidden>Nästa Fråga</button>
                     </section>
             </section>
 
+            <div class="feedback" aria-live="polite">
             <!--Korrekt svar-->
-            <section class="correct-answer">
+            <section class="correct-answer" hidden>
                 <header class="correct-header">
                     <strong>✓</strong>
                     <h3>Pang på!</h3>
@@ -88,7 +90,7 @@
             </section>
 
             <!--Inkorrekt svar-->
-            <section class="incorrect-answer">
+            <section class="incorrect-answer" hidden>
                 <header class="incorrect-header">
                     <strong>x</strong>
                     <h3>Nära, men nej</h3>
@@ -97,6 +99,7 @@
                     <span>Visste du?</span>
                     <p>Volga är omkring 3 500 km lång och rinner ut i Kaspiska havet.</p>
             </section>
+        </div>
         </main>
   </body>
 </html>

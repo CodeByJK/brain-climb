@@ -248,3 +248,20 @@ body {
     font-size: var(--font-size-sm);
     line-height: var(--line-height-body);
 }
+/* hidden ska alltid dölja, även om elementet har en egen display */
+[hidden] {
+  display: none !important;
+}
+
+.answer.is-correct {
+  background-color: var(--color-surface-mint);
+  border: 2px solid var(--color-secondary);
+}
+
+.answer.is-wrong {
+  border: 2px solid var(--color-accent);
+}
+
+.answer:disabled {
+  cursor: default;
+}
