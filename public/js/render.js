@@ -12,6 +12,7 @@ const selectors = {
   feedbackCorrect: ".correct-answer",
   feedbackIncorrect: ".incorrect-answer",
   nextButton: ".next-question",
+  score: ".score p", // Tillagt för att få C4 att fungera - Johanna
 };
 
 const letters = ["A", "B", "C", "D", "E", "F"];
@@ -144,4 +145,12 @@ export function renderResult({ score, total }) {
   if (!resultElement) return;
 
   resultElement.textContent = `${score} av ${total} rätt`;
+}
+
+// Used by C4 to update the player's score during the quiz. - Johanna
+export function renderScore(score) {
+const resultElement = getElement(selectors.result);
+if (!resultElement) return;
+
+resultElement.textContent = `${score} rätt`;
 }

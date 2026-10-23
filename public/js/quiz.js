@@ -89,12 +89,12 @@ export function getState(){
  *
  * Användning i main.js:
  *   const questions = await loadQuestions();
- *   const saved = loadQuizState();
+ *   const saved = getProgress();
  *   saved ? restoreQuiz(questions, saved) : startQuiz(questions);
  *
  * För att det ska finnas något att återställa: anropa
- * saveQuizState(getState()) efter answerQuestion() och nextQuestion().
- * Anropa clearQuizState() när quizet är klart.
+ * saveProgress(getState()) efter answerQuestion() och nextQuestion().
+ * Anropa clearProgress() när quizet är klart.
  */
 
 export function restoreQuiz(questions, progress){

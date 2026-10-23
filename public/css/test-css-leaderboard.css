@@ -59,6 +59,11 @@ body {
     margin-bottom: var( --spacing-xl);
 }
 
+.leaderboard-empty {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
 .leaderboard-list-container {
     grid-area: list;
     background-color: var(--color-background-light);
@@ -105,6 +110,10 @@ body {
         background-color: var(--color-secondary);
         color: #fff;
     }
+
+    .leaderboard-row.is-current .leaderboard-track-bar span {
+        background-color: #fff;
+    }
 }
 
 .leaderboard-name {
@@ -120,7 +129,7 @@ body {
 .leaderboard-score {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
-    span {
+    .leaderboard-total {
         font-size: var(--font-size-base);
         font-weight: var(--font-weight-regular);
     }
@@ -146,20 +155,10 @@ body {
     }
 }
 
-.leaderboard-track-bar.is-current {
-    span {
-        width: 5px;
-        height: 16px;
-        border-radius: 2px;
-        opacity: 0.25;
-        background-color: #fff;
-    }
-
-    span.is-filled{
-        background-color: #fff;
-        opacity: 1;
-    }
+.leaderboard-row.is-current .leaderboard-track-bar span:not(.is-filled) {
+    opacity: 0.4;
 }
+
 
 /* Buttons */
 
