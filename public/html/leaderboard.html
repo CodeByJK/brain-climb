@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
@@ -27,128 +27,7 @@
             </div>
 
             <div class="leaderboard-list-container">
-                <ol class="leaderboard-list">
-                    <li class="leaderboard-row is-current">
-                        <div class="leaderboard-name">
-                            <p>Maja</p>
-
-                            <p class="leaderboard-meta">
-                                <!-- i javascript sätts de riktiga tiderna -->
-                                <time datetime="2026-10-15T17:50">Nyss</time>
-                                - din omgång
-                            </p>
-                        </div>
-                        <div class="leaderboard-track-bar is-current" aria-hidden="true">
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span></span>
-                        </div>
-                        <p class="leaderboard-score">9 <span>/10</span></p>
-                    </li>
-
-                    <li class="leaderboard-row">
-                        <div class="leaderboard-name">
-                            <p>Alexander</p>
-
-                            <p class="leaderboard-meta">
-                                <!-- i javascript sätts de riktiga tiderna -->
-                                <time datetime="2026-10-14">14 oktober</time>
-                            </p>
-                        </div>
-                        <div class="leaderboard-track-bar" aria-hidden="true">
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <p class="leaderboard-score">6 <span>/10</span></p>
-                    </li>
-
-                    <li class="leaderboard-row">
-                        <div class="leaderboard-name">
-                            <p>Saga</p>
-
-                            <p class="leaderboard-meta">
-                                <!-- i javascript sätts de riktiga tiderna -->
-                                <time datetime="2026-10-17">17 oktober</time>
-                            </p>
-                        </div>
-                        <div class="leaderboard-track-bar" aria-hidden="true">
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <p class="leaderboard-score">5 <span>/10</span></p>
-                    </li>
-
-                    <li class="leaderboard-row">
-                        <div class="leaderboard-name">
-                            <p>Frida</p>
-
-                            <p class="leaderboard-meta">
-                                <!-- i javascript sätts de riktiga tiderna -->
-                                <time datetime="2026-10-12">12 oktober</time>
-                            </p>
-                        </div>
-                        <div class="leaderboard-track-bar" aria-hidden="true">
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <p class="leaderboard-score">4 <span>/10</span></p>
-                    </li>
-
-                    <li class="leaderboard-row">
-                        <div class="leaderboard-name">
-                            <p>Niklas</p>
-
-                            <p class="leaderboard-meta">
-                                <!-- i javascript sätts de riktiga tiderna -->
-                                <time datetime="2026-10-10">10 oktober</time>
-                            </p>
-                        </div>
-                        <div class="leaderboard-track-bar" aria-hidden="true">
-                            <span class="is-filled"></span>
-                            <span class="is-filled"></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <p class="leaderboard-score">2 <span> /10</span></p>
-                    </li>
-                </ol>
+                <ol class="leaderboard-list" role="list"></ol>
 
                 <div class="leaderboard-actions">
                     <button class="button leaderboard-button">Spela igen
@@ -165,28 +44,35 @@
         <template id="leaderboard-row-template">
             <li class="leaderboard-row">
                 <div class="leaderboard-name">
-                    <p></p>
+                    <p class="leaderboard-player"></p>
 
                     <p class="leaderboard-meta">
                         <!-- i javascript sätts de riktiga tiderna -->
                         <time datetime="2026-10-10"></time>
                     </p>
                 </div>
-                <div class="leaderboard-track-bar" aria-hidden="true">
-                    <span class="is-filled"></span>
-                    <span class="is-filled"></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <p class="leaderboard-score"> <span></span></p>
+                <div class="leaderboard-track-bar" aria-hidden="true"></div>
+
+                <p class="leaderboard-score">
+                    <span class="leaderboard-points"></span>
+                    <span class="leaderboard-total"></span>
+                </p>
             </li>
         </template>
+
+
+        <!-- Ta bort detta sen!! -->
+        <script type="module">
+            import { renderLeaderboard } from "../js/renderLeaderboard.js";
+          
+            const testResults = [
+              { name: "Maja", score: 9, total: 10, date: "2026-10-23T09:15:00.000Z" },
+              { name: "Alexander", score: 6, total: 10, date: "2026-10-14T18:00:00.000Z" },
+              { name: "Saga", score: 0, total: 10, date: "2026-10-17T12:00:00.000Z" },
+            ];
+          
+            renderLeaderboard(testResults);
+          </script>
     </main>
 </body>
 
