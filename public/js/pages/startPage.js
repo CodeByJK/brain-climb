@@ -1,11 +1,12 @@
 // startPage.js
 // Startsidan: spara namnet och starta eller fortsätt quizet.
 
-import { getProgress, clearProgress } from "../storage.js";
-
-// TILLFÄLLIGT tills A2 är mergad – ersätt med import från storage.js
-const getPlayerName = () => localStorage.getItem("quiz-player-name");
-const savePlayerName = (name) => localStorage.setItem("quiz-player-name", name);
+import {
+  getPlayerName,
+  savePlayerName,
+  getProgress,
+  clearProgress,
+} from "../storage.js";
 
 const QUIZ_URL = "html/quiz.html";
 
