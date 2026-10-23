@@ -178,7 +178,7 @@ img {
     height: auto;
 }
 
-@media (width > 46rem) {
+@media (width > 48rem) {
     .button {
         max-width: 250px;
     }
