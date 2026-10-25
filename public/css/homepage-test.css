@@ -287,8 +287,8 @@ body {
 }
 
 /* ---------- Brytpunkt 3: stor skärm (1440px) ---------- */
-@media (min-width: 90rem) {
+@media (min-width: 80rem) {
   .start {
-    max-width: 90rem;
+    max-width: 80rem;
   }
 }

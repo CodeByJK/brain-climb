@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fråge-sida</title>
     <!--Jag valde att kopiera Maja's ide att ha lite css som jag kan ändra sen -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/test-css-frågesida.css">
     <link rel="stylesheet" href="../css/base.css">
-    <script type="module" src="../js/main.js"></script>
   </head>
 
   <body data-page="quiz">
@@ -51,7 +52,7 @@
 
                     <!--Bilden kommer senare ändras till en riktig "score jar" med Javascript-->
                     <div class="score-jar">
-                        <img src="../assets/img/score-jar-0.png">
+                        <img src="../assets/img/score-jar-0.png" alt="bild på vår score-jar">
                     </div>
 
                     <!--Poängen kommer att kunna ökas senare med Javascript-->
@@ -59,7 +60,7 @@
                         <p>0 rätt</p>
                     </div>
                 </header>
-                    <section class="quiz-content">
+                    <div class="quiz-content">
 
                         <!--Använder frågorna från figma för test sidan innan vi kopplar json-filen-->
                         <div class="answers">
@@ -68,9 +69,9 @@
                             <button class="answer">C. Gobi öknen</button>
                             <button class="answer">D. Arabiska öknen</button> 
                         </div>
-
+                        <div  class="quiz-footer">
                         <p class="instructions">Välj ett svar innan tiden tar slut</p>
-                        <button type="button" id="next-button" class="next-question" hidden>Nästa Fråga</button>
+                        <button type="button" id="next-button" class="next-question">Nästa Fråga</button>
                     </section>
             </section>
 
