@@ -10,7 +10,13 @@ import {
   answerQuestion,
 } from "../quiz.js";
 
-import { getProgress, saveProgress } from "../storage.js";
+import {
+  getProgress,
+  saveProgress,
+  saveResult,
+  clearProgress,
+  getPlayerName,
+} from "../storage.js";
 
 import {
   renderQuestion,
@@ -22,7 +28,6 @@ import {
 
 import { startTimer, stopTimer } from "../timer.js";
 
-
 const SECONDS_PER_QUESTION = 30;
 
 // Visar den aktuella frågan
@@ -33,14 +38,10 @@ function showQuestion() {
     getCurrentQuestion(),
     currentQuestionIndex,
     questions.length,
-    handleAnswer
+    handleAnswer,
   );
 
-  startTimer(
-    SECONDS_PER_QUESTION,
-    renderTime,
-    () => handleAnswer(null)
-  );
+  startTimer(SECONDS_PER_QUESTION, renderTime, () => handleAnswer(null));
 }
 
 // Hanterar användarens svar
@@ -60,13 +61,29 @@ function handleAnswer(selectedIndex) {
   renderFeedback(question, selectedIndex, isCorrect, isLastQuestion);
 }
 
-// Går vidare till nästa fråga
+// Går vidare till nästa fråga eller avslutar quizet
 function handleNext() {
   const hasNextQuestion = nextQuestion();
 
   if (hasNextQuestion) {
+    saveProgress(getState());
     showQuestion();
+  } else {
+    finishQuiz();
   }
+}
+
+// Avslutar quizet och sparar resultatet
+function finishQuiz() {
+  saveResult({
+    name: getPlayerName() ?? "Anonym",
+    ...getResult(),
+    date: new Date().toISOString(),
+  });
+
+  clearProgress();
+
+  location.href = "leaderboard.html";
 }
 
 // Startar eller återställer quizet
