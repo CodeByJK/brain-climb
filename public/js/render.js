@@ -149,7 +149,7 @@ export function renderResult({ score, total }) {
 
 // Used by C4 to update the player's score during the quiz. - Johanna
 export function renderScore(score) {
-const resultElement = getElement(selectors.result);
+const resultElement = getElement(selectors.score);
 if (!resultElement) return;
 
 resultElement.textContent = `${score} rätt`;
