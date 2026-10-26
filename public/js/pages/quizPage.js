@@ -41,6 +41,8 @@ function showQuestion() {
     handleAnswer,
   );
 
+  renderScore(getResult().score);
+
   startTimer(SECONDS_PER_QUESTION, renderTime, () => handleAnswer(null));
 }
 
@@ -99,13 +101,29 @@ export async function initQuizPage() {
       startQuiz(questions);
     }
 
+    if (!getPlayerName()) {
+      location.href = "../index.html";
+      return;
+    }
+
     const nextButton = document.querySelector("#next-button");
 
     if (nextButton) {
       nextButton.addEventListener("click", handleNext);
     }
 
-    showQuestion();
+    const state = getState();
+    const currentQuestion = getCurrentQuestion();
+
+    const alreadyAnswered = state.userAnswers.some(
+      (answer) => answer.questionId === currentQuestion.id,
+    );
+
+    if (alreadyAnswered) {
+      handleNext();
+    } else {
+      showQuestion();
+    }
   } catch (error) {
     console.error(error);
     renderError("Kunde inte ladda frågorna");
