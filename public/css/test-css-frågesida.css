@@ -397,7 +397,7 @@ padding-inline: var(--spacing-xl);
         }
 
         .score-jar {
-            top: 35%;
+            top: 30%;
 
             img {
                 height: 16rem;
@@ -406,12 +406,12 @@ padding-inline: var(--spacing-xl);
         }
 
         .score {
-            bottom: 25%;
+            bottom: 30%;
             font-size: var(--font-size-base);
         }
 
         .category {
-            bottom: 25%;
+            bottom: 30%;
             left: var(--spacing-2xl);
             padding: 0.375rem 0.75rem;
             font-size: var(--spacing-base);
@@ -422,7 +422,7 @@ padding-inline: var(--spacing-xl);
             bottom: 2rem;
             max-width: 80%;
             left: var(--spacing-2xl);
-            font-size: var(--font-size-3xl);
+            font-size: var(--font-size-2xl);
         }
     }
 

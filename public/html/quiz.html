@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/test-css-frågesida.css">
-    <link rel="stylesheet" href="../css/base.css">
 
     <script type="module" src="../js/main.js"></script>
   </head>
@@ -35,8 +34,8 @@
                         </div>
                     </div>    
                     <!--Kategori och frågor kommer kopplas till JSON filerna senare.-->
-                    <span class="category">Geografi</span>
-                    <h2 class="question">Vilken är världens största öken?</h2>
+                    <span class="category">Blandat</span>
+                    <h1 class="question" tabindex="-1">Vilken är världens största öken?</h1>
 
                     <!--Baren som visar vilken fråga man är på kommer att läggas till senare med Javascript-->
                     <div class="question-bar">
@@ -74,7 +73,8 @@
                         <div  class="quiz-footer">
                         <p class="instructions">Välj ett svar innan tiden tar slut</p>
                         <button type="button" id="next-button" class="next-question">Nästa Fråga</button>
-                    </section>
+                        </div>
+                    </div>   
             </section>
 
             <div class="feedback" aria-live="polite">
@@ -82,7 +82,7 @@
             <section class="correct-answer" hidden>
                 <header class="correct-header">
                     <strong>✓</strong>
-                    <h3>Pang på!</h3>
+                    <h2>Pang på!</h2>
                     <p>+1 i burken</p>
                 </header>
                     <span>Visste du?</span>
@@ -100,6 +100,6 @@
                     <p>Volga är omkring 3 500 km lång och rinner ut i Kaspiska havet.</p>
             </section>
         </div>
-        </main>
+    </main>
   </body>
 </html>
