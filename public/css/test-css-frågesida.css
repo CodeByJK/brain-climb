@@ -120,7 +120,7 @@ body {
 
     .score-jar {
         position: absolute;
-        bottom: 20%;
+        top: 6rem;
         right: 0.75rem;
 
         img {
@@ -134,7 +134,7 @@ body {
     .score {
         position: absolute;
         right: 0.75rem;
-        bottom: 0.75rem;
+        top: 12rem;
         color: var(--color-text-secondary);
         font-size: var(--font-size-sm);
         font-weight: var(--font-weight-bold);
@@ -236,10 +236,6 @@ body {
     color: #481210;
 }
 
-.correct-header h3,
-.incorrect-header h3 {
-    font-size: var(--font-size-base);
-}
 
 .correct-header p,
 .incorrect-header p {
@@ -313,7 +309,7 @@ padding-inline: var(--spacing-lg);
         }
 
         .score {
-            bottom: 20%;
+            top: 21rem;
             left: 50%;
             right: auto;
             transform: translateX(-50%);
@@ -398,7 +394,7 @@ padding-inline: var(--spacing-xl);
         }
 
         .score-jar {
-            top: 30%;
+            top: 35%;
 
             img {
                 height: 16rem;
@@ -407,12 +403,12 @@ padding-inline: var(--spacing-xl);
         }
 
         .score {
-            bottom: 30%;
+            top: 70%;
             font-size: var(--font-size-base);
         }
 
         .category {
-            bottom: 30%;
+            bottom: 25%;
             left: var(--spacing-2xl);
             padding: 0.375rem 0.75rem;
             font-size: var(--spacing-base);
@@ -423,7 +419,7 @@ padding-inline: var(--spacing-xl);
             bottom: 2rem;
             max-width: 80%;
             left: var(--spacing-2xl);
-            font-size: var(--font-size-2xl);
+            font-size: var(--font-size-xl);
         }
     }
 
@@ -456,4 +452,19 @@ padding-inline: var(--spacing-xl);
 .container {
 padding-inline: var(--spacing-2xl);
 }
+
+    .quiz-header {
+        .score-jar {
+            top: 30%
+        }
+        .score {
+            top: 70%;
+        }
+
+        .question {
+            font-size: var(--font-size-2xl);
+        }
+    }
+
+
 }

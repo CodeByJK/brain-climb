@@ -96,7 +96,7 @@ export function renderError(message) {
 }
 
 // selectedIndex är null om tiden tog slut innan användaren svarade
-export function renderFeedback(question, selectedIndex, isCorrect) {
+export function renderFeedback(question, selectedIndex, isCorrect, isLastQuestion) {
   const optionsElement = getElement(selectors.options);
   const section = getElement(
     isCorrect ? selectors.feedbackCorrect : selectors.feedbackIncorrect,
@@ -120,7 +120,7 @@ export function renderFeedback(question, selectedIndex, isCorrect) {
 
   // Vid fel svar: rubrik och vilket svar som var rätt
   if (!isCorrect) {
-    const title = section.querySelector("h3");
+    const title = section.querySelector("h2");
     const correctText = section.querySelector("header p");
     const correctAnswer = question.answers[question.correctAnswer];
 
@@ -143,6 +143,7 @@ export function renderFeedback(question, selectedIndex, isCorrect) {
 
   // Visa "Nästa fråga" och flytta fokus dit, så att tangentbordet fungerar
   if (nextButton) {
+    nextButton.textContent = isLastQuestion ? `Se resultat` : `Nästa fråga`;
     nextButton.hidden = false;
     nextButton.focus();
   }
