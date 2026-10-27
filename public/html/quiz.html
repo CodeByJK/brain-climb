@@ -70,36 +70,37 @@
                             <button class="answer">C. Gobi öknen</button>
                             <button class="answer">D. Arabiska öknen</button> 
                         </div>
+
+                        <div class="feedback" aria-live="polite">
+                            <!--Korrekt svar-->
+                            <section class="correct-answer" hidden>
+                            <header class="correct-header">
+                                <strong>✓</strong>
+                                <h2>Pang på!</h2>
+                                <p>+1 i burken</p>
+                            </header>
+                                <span>Visste du?</span>
+                                <p>Antarktis räknas som öken eftersom nederbörden är så låg - och den är cirka 14 miljoner km².</p>
+                            </section>
+
+                            <!--Inkorrekt svar-->
+                            <section class="incorrect-answer" hidden>
+                            <header class="incorrect-header">
+                                <strong>x</strong>
+                                <h2>Nära, men nej</h2>
+                                <p>Rätt svar är Volga</p>
+                            </header>
+                                <span>Visste du?</span>
+                                <p>Volga är omkring 3 500 km lång och rinner ut i Kaspiska havet.</p>
+                            </section>
+                        </div>
+
                         <div  class="quiz-footer">
                         <p class="instructions">Välj ett svar innan tiden tar slut</p>
-                        <button type="button" id="next-button" class="next-question">Nästa Fråga</button>
+                        <button type="button" id="next-button" class="next-question" disabled>Nästa Fråga</button>
                         </div>
                     </div>   
             </section>
-
-            <div class="feedback" aria-live="polite">
-            <!--Korrekt svar-->
-            <section class="correct-answer" hidden>
-                <header class="correct-header">
-                    <strong>✓</strong>
-                    <h2>Pang på!</h2>
-                    <p>+1 i burken</p>
-                </header>
-                    <span>Visste du?</span>
-                    <p>Antarktis räknas som öken eftersom nederbörden är så låg - och den är cirka 14 miljoner km².</p>
-            </section>
-
-            <!--Inkorrekt svar-->
-            <section class="incorrect-answer" hidden>
-                <header class="incorrect-header">
-                    <strong>x</strong>
-                    <h2>Nära, men nej</h2>
-                    <p>Rätt svar är Volga</p>
-                </header>
-                    <span>Visste du?</span>
-                    <p>Volga är omkring 3 500 km lång och rinner ut i Kaspiska havet.</p>
-            </section>
-        </div>
-    </main>
-  </body>
+        </main>
+    </body>
 </html>

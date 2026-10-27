@@ -21,13 +21,21 @@ const letters = ["A", "B", "C", "D", "E", "F"];
 
 const getElement = (selector) => document.querySelector(selector);
 
-// Döljer feedback och "Nästa fråga" inför en ny fråga
+// Döljer feedback inför en ny fråga och gör nästa fråga knappen disabled 
+
 function hideFeedback() {
-  [selectors.feedbackCorrect, selectors.feedbackIncorrect, selectors.nextButton]
+  [selectors.feedbackCorrect, selectors.feedbackIncorrect]
     .map(getElement)
     .forEach((element) => {
       if (element) element.hidden = true;
     });
+
+ const nextButton = getElement(selectors.nextButton);
+  if(nextButton) {
+    nextButton.hidden = false;
+    nextButton.disabled = true;
+    nextButton.textContent = "Nästa fråga";
+  }
 }
 
 /* ---------- Hjälpfunktion utan DOM ---------- */
@@ -44,6 +52,7 @@ export function formatTime(seconds) {
 
 // index är 0-baserat: index 2 visas som "Fråga 3 av 10"
 export function renderQuestion(question, index, total, onAnswer) {
+   hideFeedback();
   const textElement = getElement(selectors.questionText);
   const counterElement = getElement(selectors.questionCounter);
   const optionsElement = getElement(selectors.options);
@@ -51,8 +60,6 @@ export function renderQuestion(question, index, total, onAnswer) {
 
   // Elementen finns inte på alla sidor
   if (!textElement || !optionsElement) return;
-
-  hideFeedback();
 
   textElement.textContent = question.question;
 
@@ -101,6 +108,7 @@ export function renderFeedback(question, selectedIndex, isCorrect, isLastQuestio
   const section = getElement(
     isCorrect ? selectors.feedbackCorrect : selectors.feedbackIncorrect,
   );
+
   const nextButton = getElement(selectors.nextButton);
 
   if (!optionsElement || !section) return;
@@ -144,7 +152,7 @@ export function renderFeedback(question, selectedIndex, isCorrect, isLastQuestio
   // Visa "Nästa fråga" och flytta fokus dit, så att tangentbordet fungerar
   if (nextButton) {
     nextButton.textContent = isLastQuestion ? `Se resultat` : `Nästa fråga`;
-    nextButton.hidden = false;
+    nextButton.disabled = false;
     nextButton.focus();
   }
 }
