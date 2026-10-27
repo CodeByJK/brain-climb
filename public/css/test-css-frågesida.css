@@ -108,13 +108,14 @@ body {
         span {
             width: 100%;
             border-radius: var(--border-radius-sm);
-            background-color: var(--color-background-light)
-            ;
+            background-color: var(--color-background-light);
         }
 
-        span.question-number {
-            background-color: var(--color-text-primary);
+        span.is-filled {
+        background-color: var(--color-text-primary);
+        height: 100%;
         }
+
     }
 
     .score-jar {

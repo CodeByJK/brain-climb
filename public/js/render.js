@@ -4,7 +4,8 @@
 // Alla element på ett ställe. Ändra här om HTML:en ändras.
 const selectors = {
   questionText: ".quiz-question .question",
-  questionCounter: ".numbers .question-number p",
+  questionCounter: ".numbers .question-number p  span", //Ändrade så att bara den Orange:a bokstaven ändras D2 - Raul
+  questionBar: ".question-bar",
   options: ".answers",
   timer: '[role="timer"] span',
   error: "#error-message",
@@ -13,6 +14,7 @@ const selectors = {
   feedbackIncorrect: ".incorrect-answer",
   nextButton: ".next-question",
   score: ".score p", // Tillagt för att få C4 att fungera - Johanna
+  scoreJarImg: ".score-jar img", //Burk bilderna för D2 - Raul
 };
 
 const letters = ["A", "B", "C", "D", "E", "F"];
@@ -45,6 +47,7 @@ export function renderQuestion(question, index, total, onAnswer) {
   const textElement = getElement(selectors.questionText);
   const counterElement = getElement(selectors.questionCounter);
   const optionsElement = getElement(selectors.options);
+  const barElement = getElement(selectors.questionBar)
 
   // Elementen finns inte på alla sidor
   if (!textElement || !optionsElement) return;
@@ -53,8 +56,15 @@ export function renderQuestion(question, index, total, onAnswer) {
 
   textElement.textContent = question.question;
 
+  // Alla Element som ändras med frågorna D2 - Raul
   if (counterElement) {
-    counterElement.textContent = `Fråga ${index + 1} av ${total}`;
+    counterElement.textContent = index + 1;
+  }
+
+  if(barElement) {
+    [...barElement.children].forEach((segment, i) => {
+      segment.classList.toggle("is-filled", i === index)
+    });
   }
 
   // Töm gamla alternativ (även testknapparna i HTML:en)
@@ -148,9 +158,18 @@ export function renderResult({ score, total }) {
 }
 
 // Used by C4 to update the player's score during the quiz. - Johanna
-export function renderScore(score) {
-const resultElement = getElement(selectors.score);
-if (!resultElement) return;
+//Jag kommer använda samma Js så att den inte behöver definiera något nytt för D2 - Raul
 
-resultElement.textContent = `${score} rätt`;
+export function renderScore(score) {
+  const resultElement = getElement(selectors.score);
+  if (resultElement) {
+  resultElement.textContent = `${score} rätt`;
+  }
+
+  const jarElement = getElement(selectors.scoreJarImg);
+  if (jarElement) {
+    jarElement.src = `../assets/img/score-jar-${score}.png`;
+    jarElement.alt = ``
+  }
+  
 }
