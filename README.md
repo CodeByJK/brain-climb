@@ -109,4 +109,7 @@ Vår idé från början var att ha en animation under tiden som användaren gör
 
 En brist i arbetet var att vi kollade tillgängligheten i slutet av projektet när det nästan var klart. Detta gjorde att vi behövde ändra färger osv på slutet. När vi tog fram prototypen i figma skulle vi ha sagt det som ett krav att webbsidan ska vara tillgänglig (sedan granskat resultatet från AI).
 
-Frågorna generas med JSON till en början, men tanken är att vi ska använda oss utav ett AI API för att generera frågedatan.
+En annan reflektion vi kommit fram till är vikten av bra planering och förståelse för projektet innan man börjar skriva kod. Om vi fick göra något annorlunda hade vi tagit fram ett flödesschema eller något liknande för att förstå hur appen ska fungera, vad användaren ska kunna göra mm. 
+
+En annan reflektion är vikten av planering och en gemensam förståelse för projektet innan man börjar skriva kod. Om vi fick göra om projektet hade vi börjat med ett flödesschema som visar vad användaren ska kunna göra och vilka tillstånd appen kan befinna sig i. Det hade gjort det lättare att upptäcka logiska luckor tidigt, gett gruppen en gemensam bild av appen och underlättat arbetsfördelningen.
+
