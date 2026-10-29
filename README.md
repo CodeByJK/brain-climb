@@ -55,26 +55,28 @@ Ett vardagsquiz i webbläsaren med 10 blandade frågor om världen omkring oss. 
 
 ## Projektstruktur
 
+```text
 public/
-├── index.html              # Startsida
+├── index.html                  # Startsida
 ├── html/
-│   ├── quiz.html           # Frågesida
-│   └── leaderboard.html    # Topplista
+│   ├── quiz.html               # Frågesida
+│   └── leaderboard.html        # Topplista
 ├── data/
-│   └── question.json       # Frågor, svar, rätt svar och förklaring
-├── css/                    # base, layout, components + sidspecifik CSS
+│   └── question.json           # Frågor, svar, rätt svar och förklaring
+├── css/                        # base, layout, components + sidspecifik CSS
 └── js/
-├── main.js             # Startpunkt – läser data-page på <body> och startar rätt sida
-├── pages/
-│   ├── startPage.js        # Namn, starta / fortsätta quiz
-│   ├── quizPage.js         # Styr flödet: fråga → svar → feedback → nästa
-│   └── leaderboardPage.js  # Hämtar resultat och visar topplistan
-├── api.js              # Hämtar frågorna från JSON-filen
-├── quiz.js             # Spellogik och state (poäng, aktuell fråga, svar)
-├── timer.js            # Nedräkningstimer per fråga
-├── storage.js          # Läser och skriver till localStorage
-├── render.js           # Uppdaterar DOM:en på frågesidan
-└── renderLeaderboard.js # Bygger topplistan med en <template>
+    ├── main.js                 # Startpunkt – läser data-page på <body> och startar rätt sida
+    ├── pages/
+    │   ├── startPage.js        # Namn, starta / fortsätta quiz
+    │   ├── quizPage.js         # Styr flödet: fråga → svar → feedback → nästa
+    │   └── leaderboardPage.js  # Hämtar resultat och visar topplistan
+    ├── api.js                  # Hämtar frågorna från JSON-filen
+    ├── quiz.js                 # Spellogik och state (poäng, aktuell fråga, svar)
+    ├── timer.js                # Nedräkningstimer per fråga
+    ├── storage.js              # Läser och skriver till localStorage
+    ├── render.js               # Uppdaterar DOM:en på frågesidan
+    └── renderLeaderboard.js    # Bygger topplistan med en <template>
+```
 
 ### Ansvarsfördelning i koden
 Koden är uppdelad så att varje fil har ett eget ansvar:
