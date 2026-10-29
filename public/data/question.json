@@ -109,14 +109,14 @@
 },
 {
 "id": 10,
-"question": "Om du blandar en vanlig kortlek med 52 spelkort ordentligt, vad är då anmärkningsvärt med den nya ordningen?",
+"question": "Vilket djur har fyrkantiga pupiller?",
 "answers": [
-"Den kommer troligen att motsvara en ordning som har förekommit tidigare",
-"Det är sannolikt en ordning som aldrig har förekommit tidigare",
-"Den kommer alltid att innehålla fyra kort av samma färg i följd",
-"Den kommer att ha lika många röda som svarta kort i varje halva"
+"Get",
+"Känguru",
+"Flamingo",
+"Kameleont"
 ],
-"correctAnswer": 1,
-"explanation": "En kortlek kan ordnas på ungefär 8 × 10⁶⁷ sätt, så en väl blandad kortlek har nästan säkert en ordning som ingen har sett förut."
+"correctAnswer": 0,
+"explanation": "Getter har horisontellt rektangulära pupiller. Det ger dem ett brett synfält på nästan 360 grader, vilket är praktiskt när de behöver hålla koll på rovdjur."
 }
 ]
