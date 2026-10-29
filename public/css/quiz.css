@@ -17,7 +17,7 @@ body {
     background-color: var(--color-background);
     display: flex;
     flex-direction: column;
-    min-height: 100dvh;
+    max-height: 100dvh;
 }
 
 .quiz-question {
@@ -30,7 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 12.5rem;
+    min-height: 25dvh;
     padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) ;
     background-color: var(--color-background-mint);
     border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
@@ -338,17 +338,14 @@ padding-inline: var(--spacing-lg);
         }
 
         .category {
-            position: absolute;
-            left: 0.75rem;
-            bottom: 5.2rem;
-            margin-top: 0;
+            position: static;
+            margin-top: auto;
         }
 
         .question {
             max-width: 100%;
-            position: absolute;
-            bottom: 1.5rem;
-            left: 0.75rem;
+            position: static;
+            margin-top: 0.75rem;
         }
     }
 
@@ -389,7 +386,7 @@ padding-inline: var(--spacing-xl);
     .quiz-header {
         margin: 0;
         margin-left: 7.5%;
-        min-height: 100%;
+        min-height: 90dvh;
         width: 85%;
         align-self: flex-end;
         border-radius: 2rem;
@@ -414,11 +411,11 @@ padding-inline: var(--spacing-xl);
         }
 
         .question-bar {
-        top: 22%;
-        right: var(--spacing-2xl);
-        left: var(--spacing-2xl);
-        height: 0.3rem;
-        gap: var(--spacing-xs);
+            top: 22%;
+            right: var(--spacing-2xl);
+            left: var(--spacing-2xl);
+            height: 0.3rem;
+            gap: var(--spacing-xs);
         }
 
         .score-jar {
@@ -436,7 +433,6 @@ padding-inline: var(--spacing-xl);
         }
 
         .category {
-            bottom: 15rem;
             left: var(--spacing-2xl);
             padding: 0.375rem 0.75rem;
             font-size: var(--spacing-base);
@@ -446,7 +442,6 @@ padding-inline: var(--spacing-xl);
         }
 
         .question {
-            bottom: 2rem;
             max-width: 80%;
             left: var(--spacing-2xl);
             font-size: var(--font-size-xl);
