@@ -33,7 +33,7 @@ Knappar, kort, formulär och andra återanvändbara komponenter
 
 /* Pills */
 .pill {
-    background-color: var(--color-accent);
+    background-color: var(--color-secondary);
     color: var(--color-background-light);
     padding: 8px 10px;
     border-radius: 6px 3px 6px 3px;

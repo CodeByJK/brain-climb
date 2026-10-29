@@ -87,7 +87,7 @@ body {
   width: fit-content;
   margin: 0 0 var(--spacing-base);
   padding: 8px 10px;
-  background-color: var(--color-accent);
+  background-color: var(--color-secondary);
   color: var(--color-background-light);
   border-radius: 6px 3px 6px 3px;
   transform: rotate(-1.5deg);
