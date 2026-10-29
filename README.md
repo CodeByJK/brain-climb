@@ -93,3 +93,9 @@ Frågorna hämtas med `fetch`, så appen måste köras via en lokal server. Det 
 2. Starta en lokal server i mappen `public/`, till exempel med **Live Server** i VS Code eller:
    ```bash
    npx serve public
+
+## AI-användning
+Vi har använt AI för vår planering. Först gav AI oss en grovplanering som vi följde. En vecka in i arbetet kan vi om en mer detaljerad planering och förslag på hur vi kunde arbeta för att undvika merge conflicts. 
+
+Vi har även använt AI för att granska och ge förslag på hur vi kan förbättra tillgängligheten. Främst för färgkonstraster. 
+
