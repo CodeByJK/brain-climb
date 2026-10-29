@@ -37,13 +37,13 @@ body {
     row-gap: var(--spacing-xl);
 }
 
-.img-wrapper {
+.score-jar {
     grid-area: scorejar;
-    width: 64px;
+    width: clamp(4rem, 12vh, 8rem);
     align-self: self-start;
 }
 
-.img-wrapper img {
+.score-jar img {
     width: 100%;
 }
 
@@ -205,12 +205,29 @@ img {
         grid-template-areas: 
         "header scorejar"
         "list scorejar";
+        grid-template-rows: auto minmax(0, 1fr);
+        height: 100dvh;
         column-gap: var(--spacing-2xl);
     }
 
-    .img-wrapper {
-        width: min(320px, 100%);
+    .score-jar {
+        width: auto;
+        min-height: 0;
         justify-self: center;
-        align-self: center;
+        align-self: stretch;
+        display: flex;
+        justify-content: center;
+
+        img {
+            height: 100%;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .leaderboard-list-container {
+        min-height: 0;
+        overflow-y: auto;
     }
 }

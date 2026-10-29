@@ -55,6 +55,11 @@ export function renderLeaderboard(results) {
 
     const latest = results.at(-1);
 
+    const jarElement = document.querySelector(".score-jar Img");
+    if (jarElement) {
+    jarElement.src = `../assets/img/score-jar-${latest.score}.png`;
+    }
+
     const sorted = sortByScore(results);
 
     const best = sorted[0];
