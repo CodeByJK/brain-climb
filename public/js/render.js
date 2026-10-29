@@ -85,6 +85,9 @@ export function renderQuestion(question, index, total, onAnswer) {
     button.addEventListener("click", () => onAnswer(answerIndex));
     optionsElement.append(button);
   });
+
+  document.title = `Fråga ${index + 1} av ${total} – Fyll burken`;
+  textElement.focus();
 }
 
 export function renderTime(seconds) {
