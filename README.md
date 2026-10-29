@@ -1,5 +1,12 @@
-# brain-climb
+# Brain-climb
 Quiz app with progress meter
+
+by Raul Del Pozo, Maja Karlsson, Johanna Krantz, Kevin Nkurunziza.
+
+## Publicerad sida
+
+[Fyll Burken](https://fyllburken.netlify.app/)
+
 
 ## 🎨 Design & Prototyp
 
