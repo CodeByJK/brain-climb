@@ -292,3 +292,34 @@ body {
     max-width: 80rem;
   }
 }
+
+/* ---------- Mobil: burken mindre så att sidan får plats utan scroll ---------- */
+@media (max-width: 47.99rem) {
+  .start {
+    min-height: 100dvh; /* räknar med webbläsarens adressfält på mobil */
+    padding-block: var(--spacing-lg);
+  }
+
+  .jar {
+    width: auto;
+    margin-bottom: var(--spacing-base);
+  }
+
+  /* Burken styrs av höjden: max 18 % av skärmens höjd */
+  .jar img {
+    height: min(18dvh, 9rem);
+    width: auto;
+  }
+
+  #start-heading {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .start__intro {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .start__form {
+    padding-top: var(--spacing-lg);
+  }
+}
