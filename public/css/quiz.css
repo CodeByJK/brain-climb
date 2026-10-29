@@ -25,6 +25,10 @@ body {
     flex-direction: column;
 }
 
+.question:focus {
+    outline: none;
+}
+
 .quiz-header {
     position: relative;
     display: flex;

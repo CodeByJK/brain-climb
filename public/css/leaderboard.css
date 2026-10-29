@@ -75,12 +75,17 @@ body {
 
 /* Leaderboard listan */
 
-.leaderboard-list{
+.leaderboard-list {
     width: 100%;
     list-style: none;
     padding: 0;
     counter-reset: rank;
     margin-bottom: var(--spacing-lg);
+
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+    column-gap: var(--spacing-md);
+    row-gap: var(--spacing-md);
 
     .leaderboard-row{
         counter-increment: rank;
@@ -88,8 +93,11 @@ body {
         border-radius: var(--border-radius-md);
         background-color: var(--color-surface-mint);
         color: var(--color-secondary);
-        margin-block: var(--spacing-md);
-        display: flex;
+        margin-block: 0;
+        
+        display: grid;
+        grid-column: 1 / -1;
+        grid-template-columns: subgrid;
         align-items: center;
     }
     .leaderboard-row::before {
@@ -102,7 +110,7 @@ body {
         border-radius: 50%;
         background-color: #fff;
         font-weight: var(--font-weight-bold);
-        margin-right: var(--spacing-md);
+        margin-right: 0;
         color: var(--color-secondary);
     }
 
@@ -113,6 +121,10 @@ body {
 
     .leaderboard-row.is-current .leaderboard-track-bar span {
         background-color: #fff;
+    }
+
+    .leaderboard-track-bar {
+        margin: 0;
     }
 }
 
@@ -129,11 +141,15 @@ body {
 .leaderboard-score {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
+    white-space: nowrap;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
     .leaderboard-total {
         font-size: var(--font-size-base);
         font-weight: var(--font-weight-regular);
     }
 }
+
 
 .leaderboard-track-bar {
     display: flex;
