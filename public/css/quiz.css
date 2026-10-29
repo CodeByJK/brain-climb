@@ -30,9 +30,17 @@ body {
 }
 
 .quiz-header {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: 
+        "corner     corner"
+        "numbers    numbers"
+        "bar        bar"
+        "category   jar"
+        "question   jar"
+        "question   score";
+    column-gap: var(--spacing-md);
+    row-gap: var(--spacing-sm);
     width: 100%;
     min-height: 25dvh;
     padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) ;
@@ -40,12 +48,14 @@ body {
     border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
 
     .header-corner {
+        grid-area: corner;
         color: var(--color-text-secondary);
         font-size: var(--font-size-sm);
         font-weight: var(--font-weight-bold);
     }
 
     .numbers {
+        grid-area: numbers;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -81,7 +91,8 @@ body {
     }
 
     .category {
-        align-self: flex-start;
+        grid-area: category;
+        justify-self: start;
         margin-top: 1rem;
         padding: 0.19rem 0.375rem;
         border-radius: 0.19rem var(--border-radius-sm) 0.19rem var(--border-radius-sm);
@@ -92,8 +103,8 @@ body {
     }
 
     .question {
+        grid-area: question;
         max-width: 70%;
-        margin-top: 1rem;
         color: var(--color-text-primary);
         font-size: var(--font-size-xl);
         font-weight: var(--font-weight-bold);
@@ -101,10 +112,7 @@ body {
     }
 
     .question-bar {
-        position: absolute;
-        right: 0.75rem;
-        top: 4.5rem ; 
-        left: 0.75rem;
+        grid-area: bar;
         display: flex;
         gap: var(--spacing-xs);
         height: 0.19rem;
@@ -123,22 +131,20 @@ body {
     }
 
     .score-jar {
-        position: absolute;
-        top: 6rem;
-        right: 0.75rem;
+        grid-area: jar;
+        justify-self: end;
+        margin-top: 1rem;
 
         img {
             display: block;
+            height: clamp(5rem, 15dvh, 6rem);
             width: auto;
-            height: 5rem;
-            object-fit: contain;
         }
     }
 
     .score {
-        position: absolute;
-        right: 0.75rem;
-        top: 12rem;
+        grid-area: score;
+        justify-self: end;
         color: var(--color-text-secondary);
         font-size: var(--font-size-sm);
         font-weight: var(--font-weight-bold);
