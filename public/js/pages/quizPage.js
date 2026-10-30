@@ -28,6 +28,12 @@ import {
 
 import { startTimer, stopTimer } from "../timer.js";
 
+import {
+  playCorrectSound,
+  playIncorrectSound,
+  toggleSound,
+} from "../sounds.js";
+
 const SECONDS_PER_QUESTION = 30;
 
 // Visar den aktuella frågan
@@ -52,6 +58,15 @@ function handleAnswer(selectedIndex) {
 
   const question = getCurrentQuestion();
   const isCorrect = answerQuestion(selectedIndex);
+
+  // Spela ljud om användaren har valt ett svar
+  if (selectedIndex !== null) {
+    if (isCorrect) {
+      playCorrectSound();
+    } else {
+      playIncorrectSound();
+    }
+  }
 
   saveProgress(getState());
 
@@ -110,6 +125,22 @@ export async function initQuizPage() {
 
     if (nextButton) {
       nextButton.addEventListener("click", handleNext);
+    }
+
+    // Hanterar knappen för ljud av och på
+    const soundButton = document.querySelector("#sound-toggle");
+
+    if (soundButton) {
+      soundButton.addEventListener("click", () => {
+        const soundEnabled = toggleSound();
+
+        soundButton.textContent = soundEnabled ? "🔊" : "🔇";
+        soundButton.setAttribute(
+          "aria-label",
+          soundEnabled ? "Stäng av ljud" : "Sätt på ljud",
+        );
+        soundButton.setAttribute("aria-pressed", String(soundEnabled));
+      });
     }
 
     const state = getState();
