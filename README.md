@@ -30,7 +30,7 @@ Ett vardagsquiz i webbläsaren med 10 blandade frågor om världen omkring oss. 
 - Frågorna hämtas från `data/question.json`.
 - Varje fråga har fyra svarsalternativ (A–D) och en timer som räknar ner.
 - När man svarar, eller när tiden tar slut:
-  - låses alternativen, och det rätta svaret markeras med ✓ och ett felaktigt val med ✗ (både med färg och med tecken)
+  - låses alternativen, och det rätta svaret markeras med ✓ och ett felaktigt val med ✗ (både med färg, ljud och med tecken)
   - visas feedback: *"Pang på!"* vid rätt svar och *"Nära, men nej"* eller *"Tiden tog slut"* vid fel svar, tillsammans med en kort "Visste du?"-förklaring
   - uppdateras poängen, och burkbilden byts ut så att den blir fullare för varje rätt svar
 - En progressbar och en räknare (t.ex. 3/10) visar vilken fråga man är på.
@@ -105,11 +105,9 @@ Vi har även använt AI för att granska och ge förslag på hur vi kan förbät
 Under merge conflicts användes AI som stöd för att kunna lösa konflikten. 
 
 ## Reflektion
-Vår idé från början var att ha en animation under tiden som användaren gör framsteg i applikationen. Vi insåg att detta skulel vara tidskrävande att producera, därav tog vi en enklare idé. Vi har därför två skisser i figma, en med animationen och en enklare variant som bara speglar användarens framsteg i en bild. Vi tror att det var smart att sänka ambitions nivån något för att verkligen fokusera på applikationslogiken och få en fungerande applikation först. 
+Vår idé från början var att ha en animation under tiden som användaren gör framsteg i applikationen. Vi insåg att detta skulle vara tidskrävande att producera, därav tog vi en enklare idé. Vi har därför två skisser i figma, en med animationen och en enklare variant som bara speglar användarens framsteg i en bild. Vi tror att det var smart att sänka ambitions nivån något för att verkligen fokusera på applikationslogiken och få en fungerande applikation först. 
 
 En brist i arbetet var att vi kollade tillgängligheten i slutet av projektet när det nästan var klart. Detta gjorde att vi behövde ändra färger osv på slutet. När vi tog fram prototypen i figma skulle vi ha sagt det som ett krav att webbsidan ska vara tillgänglig (sedan granskat resultatet från AI).
-
-En annan reflektion vi kommit fram till är vikten av bra planering och förståelse för projektet innan man börjar skriva kod. Om vi fick göra något annorlunda hade vi tagit fram ett flödesschema eller något liknande för att förstå hur appen ska fungera, vad användaren ska kunna göra mm. 
 
 En annan reflektion är vikten av planering och en gemensam förståelse för projektet innan man börjar skriva kod. Om vi fick göra om projektet hade vi börjat med ett flödesschema som visar vad användaren ska kunna göra och vilka tillstånd appen kan befinna sig i. Det hade gjort det lättare att upptäcka logiska luckor tidigt, gett gruppen en gemensam bild av appen och underlättat arbetsfördelningen.
 
