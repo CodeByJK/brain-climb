@@ -507,3 +507,18 @@ padding-inline: var(--spacing-2xl);
 .sound-toggle[aria-pressed="false"] .sound-toggle__icon--on {
   display: none;
 }
+/* ---------- Ljudknappen på mobil: samma storlek och höjd som timern ---------- */
+@media (max-width: 47.99rem) {
+  .sound-toggle {
+    width: 40px;
+    height: 40px;
+    margin-top: -8px; /* samma som .timer, så att de ligger i linje */
+    margin-right: var(--spacing-sm);
+    align-self: flex-start;
+  }
+
+  .sound-toggle__icon {
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+}
