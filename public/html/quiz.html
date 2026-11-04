@@ -27,13 +27,21 @@
               <p><span>1</span>/10</p>
             </div>
 
-            <button
+                        <button
               type="button"
               id="sound-toggle"
               class="sound-toggle"
               aria-label="Stäng av ljud"
               aria-pressed="true">
-              🔊
+              <svg class="sound-toggle__icon sound-toggle__icon--on" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 9h4l5-4v14l-5-4H4z" />
+                <path d="M16 8.5a5 5 0 0 1 0 7" />
+                <path d="M18.5 6a8.5 8.5 0 0 1 0 12" />
+              </svg>
+              <svg class="sound-toggle__icon sound-toggle__icon--off" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 9h4l5-4v14l-5-4H4z" />
+                <path d="M16.5 9.5l5 5M21.5 9.5l-5 5" />
+              </svg>
             </button>
 
             <!--Timern kommer funka senare med Javascript-->
