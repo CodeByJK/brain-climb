@@ -5,7 +5,7 @@ by Raul Del Pozo, Maja Karlsson, Johanna Krantz, Kevin Nkurunziza.
 
 ## Publicerad sida
 
-[Fyll Burken](https://fyllburken.netlify.app/)
+[Fyll Burken](https://codebyjk.github.io/brain-climb/public/)
 
 
 ## 🎨 Design & Prototyp
