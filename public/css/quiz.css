@@ -467,3 +467,43 @@ padding-inline: var(--spacing-2xl);
         }
     }
 }
+/* ---------- Ljudknappen ---------- */
+.sound-toggle {
+  margin-left: auto; /* bredvid timern */
+  margin-right: var(--spacing-md);
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  background: transparent;
+  border: 2px solid var(--color-secondary);
+  border-radius: 50%;
+  color: var(--color-secondary);
+  cursor: pointer;
+}
+
+.sound-toggle:hover {
+  background-color: color-mix(in srgb, var(--color-secondary) 12%, transparent);
+}
+
+.sound-toggle:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.sound-toggle__icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Visa rätt ikon beroende på om ljudet är på eller av */
+.sound-toggle[aria-pressed="true"] .sound-toggle__icon--off,
+.sound-toggle[aria-pressed="false"] .sound-toggle__icon--on {
+  display: none;
+}

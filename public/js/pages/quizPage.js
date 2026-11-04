@@ -134,7 +134,7 @@ export async function initQuizPage() {
       soundButton.addEventListener("click", () => {
         const soundEnabled = toggleSound();
 
-        soundButton.textContent = soundEnabled ? "🔊" : "🔇";
+       
         soundButton.setAttribute(
           "aria-label",
           soundEnabled ? "Stäng av ljud" : "Sätt på ljud",
